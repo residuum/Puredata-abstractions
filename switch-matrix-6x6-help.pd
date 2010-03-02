@@ -1,0 +1,42 @@
+#N canvas 0 0 622 382 10;
+#X obj 52 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 79 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 102 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 126 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 156 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 178 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 55 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 82 321 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 105 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 129 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 159 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 181 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 53 119 switch-matrix-6x6;
+#X text 261 146 Routes messages from up to 6 inlets to up to 6 outlets
+according to switches with values =1. Lines correspond to outlets \,
+rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
+from inlet 5 to outlet 3;
+#X connect 0 0 12 0;
+#X connect 1 0 12 1;
+#X connect 2 0 12 2;
+#X connect 3 0 12 3;
+#X connect 4 0 12 4;
+#X connect 5 0 12 5;
+#X connect 12 0 6 0;
+#X connect 12 1 7 0;
+#X connect 12 2 8 0;
+#X connect 12 3 9 0;
+#X connect 12 4 10 0;
+#X connect 12 5 11 0;

@@ -1,0 +1,8 @@
+#N canvas 389 0 450 300 10;
+#X obj 134 45 inlet;
+#X obj 139 204 outlet;
+#X obj 133 112 expr 1000 / $f1;
+#X text 179 44 ms;
+#X text 197 203 freq;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

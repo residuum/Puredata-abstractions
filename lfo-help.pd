@@ -1,0 +1,26 @@
+#N canvas 77 355 426 472 10;
+#X floatatom 54 100 5 0 0 0 - - -;
+#X obj 54 281 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 12519 1;
+#X obj 54 252 * 127;
+#X msg 93 128 sin;
+#X msg 100 153 saw;
+#X msg 110 177 tri;
+#X text 114 254 creation arguments:;
+#X text 146 294 2 time grain in milliseconds;
+#X text 144 274 1 period time (ms);
+#X text 152 25 Low Frequency Modulator;
+#X text 105 100 <- time (ms);
+#X text 162 152 <- wave shape;
+#X text 192 173 (default = sin);
+#X msg 175 200 0;
+#X text 208 199 phase;
+#X obj 54 222 lfo 2000 20 ______;
+#X text 144 386 no audio on is neaded !;
+#X connect 0 0 15 0;
+#X connect 2 0 1 0;
+#X connect 3 0 15 0;
+#X connect 4 0 15 0;
+#X connect 5 0 15 0;
+#X connect 13 0 15 1;
+#X connect 15 0 2 0;
