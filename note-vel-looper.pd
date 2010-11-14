@@ -1,4 +1,4 @@
-#N canvas 322 27 924 900 10;
+#N canvas 322 0 924 900 10;
 #X msg 159 113 stop;
 #X msg 115 167 0;
 #X obj 63 165 metro 1;
@@ -11,10 +11,10 @@
 #X obj 98 52 list \$1;
 #X obj 475 37 list \$1;
 #X obj 67 307 f;
-#X obj 252 145 hsl 128 15 0 12586 0 0 empty \$0-start start 138 6 0
-10 -262144 -258113 -1 9000 1;
-#X obj 251 165 hsl 128 15 0 12586 0 0 empty \$0-stop stop 138 6 0 10
--262144 -258113 -1 11100 1;
+#X obj 251 150 hsl 128 30 0 12586 0 0 empty \$0-start start 138 6 0
+10 -262144 -258113 -1 0 1;
+#X obj 251 186 hsl 128 30 0 12586 0 0 empty \$0-stop stop 138 6 0 10
+-262144 -258113 -1 0 1;
 #X obj 193 540 s \$0-stop;
 #X text 464 407 offset;
 #X obj 71 383 t b f f f;
@@ -161,4 +161,4 @@
 #X connect 67 0 65 1;
 #X connect 68 0 58 0;
 #X connect 69 0 63 0;
-#X coords 0 -1 1 1 185 60 1 240 125;
+#X coords 0 -1 1 1 185 95 1 240 125;

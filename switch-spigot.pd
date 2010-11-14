@@ -22,4 +22,4 @@
 #X connect 8 0 3 0;
 #X connect 9 0 2 0;
 #X connect 10 0 1 0;
-#X coords 0 -1 1 1 80 40 1 20 167;
+#X coords 0 -1 1 1 40 40 1 25 87;

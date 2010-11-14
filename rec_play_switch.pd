@@ -7,7 +7,7 @@
 #X obj 63 21 inlet;
 #X obj 42 231 outlet;
 #X obj 24 52 switch-bang;
-#X obj 54 53 switch-bang;
+#X obj 63 53 switch-bang;
 #X connect 0 0 6 0;
 #X connect 1 0 6 0;
 #X connect 2 0 6 0;
@@ -18,4 +18,4 @@
 #X connect 7 1 1 0;
 #X connect 8 0 2 0;
 #X connect 8 1 3 0;
-#X coords 0 -1 1 1 54 50 1 23 25;
+#X coords 0 -1 1 1 76 40 1 23 50;
