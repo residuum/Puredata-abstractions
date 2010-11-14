@@ -1,0 +1,276 @@
+2010-01-05 06:35  eighthave
+
+	* Firmata/Firmata.h: cleaned up comments related to subclassing
+	  some kind of Serial base class
+
+2010-01-05 06:32  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: cleaned up
+	  comments a bit
+
+2010-01-05 06:28  eighthave
+
+	* Firmata/examples/AllInputsFirmata/AllInputsFirmata.pde: wrote a
+	  more fully featured all-inputs sketch
+
+2010-01-05 05:20  eighthave
+
+	* Firmata/examples/AllInputsFirmata/AllInputsFirmata.pde: added
+	  explanation text
+
+2010-01-05 05:16  eighthave
+
+	* Firmata/examples/OldStandardFirmata/OldStandardFirmata.pde: added
+	  an explanation about why this old version is here
+
+2010-01-05 05:10  eighthave
+
+	* Firmata/examples/OldStandardFirmata,
+	  Firmata/examples/OldStandardFirmata/OldStandardFirmata.pde,
+	  Firmata/examples/OldStandardFirmata/StandardFirmataV2_0.pde,
+	  Firmata/examples/StandardFirmataV2_0: renamed StandardFirmata 2.0
+	  to be clearer that its old
+
+2010-01-04 23:04  eighthave
+
+	* Firmata/examples/AllInputsFirmata,
+	  Firmata/examples/AllInputsFirmata/AllInputsFirmata.pde: created
+	  example firmware that acts just like Arduino4Max
+
+2010-01-04 22:54  eighthave
+
+	* Firmata/examples/SimpleDigitalFirmata/SimpleDigitalFirmata.pde:
+	  removed duplicate line that sends the same message twice
+
+2010-01-02 18:48  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: removed
+	  duplicate call to send the digital data, pointed out by Bjoern
+	  Hartmann and Paul Stoffregen
+
+2010-01-02 18:31  eighthave
+
+	* Firmata/Firmata.cpp: cast to a byte for optimization, suggested
+	  by Paul Stoffregen: "The reason is because portData is a signed
+	  integer, so the compiler calls the slow code because it does not
+	  know if the value is positive or negative. If you add a byte
+	  typecast, the compiler uses a single instruction ANDI
+	  instruction"
+
+2009-11-14 00:11  eighthave
+
+	* README.txt: udpated instructions for Arduino.app
+
+2009-10-22 05:26  eighthave
+
+	* Firmata/Firmata.h: added changes from Hernando Barragan for the
+	  Wiring board
+
+2009-10-19 04:07  mayfair
+
+	* Firmata/Firmata.h,
+	  Firmata/examples/StandardFirmata/StandardFirmata.pde: modified to
+	  support servos on the other digital pins in addition to D9 and
+	  D10 (except for D0 and D1)
+
+2009-10-19 00:08  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: removed
+	  stupid function call causing endless loop...
+
+2009-10-07 20:39  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: fixed bug
+	  in setting pin to ANALOG mode, fixed by TOF
+
+2009-10-05 21:10  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: fixed bug
+	  that was setting the analog pins to act like a log pot because
+	  the internal pull-ups were on, basically setup() should not touch
+	  the analog pins and let the arduino code stay in effect
+
+2009-09-13 04:52  eighthave
+
+	* Firmata/Firmata.cpp: making one begin() call the other, and moved
+	  the blinkVersion() in response to a bug report on the arduino
+	  forum:
+	  http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1252791964/0
+
+2009-09-10 04:42  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: forgot to
+	  attach() servos before using them, and detach when switching
+	  pinmode
+
+2009-08-11 22:12  eighthave
+
+	* Firmata/examples/StandardFirmataV2_0,
+	  Firmata/examples/StandardFirmataV2_0/LICENSE.txt,
+	  Firmata/examples/StandardFirmataV2_0/StandardFirmataV2_0.pde: on
+	  Zach's suggestion, included an old version of StandardFirmata set
+	  at old 115200 bitrate to ease the transition (back) to 57600 in
+	  2.1
+
+2009-07-30 20:36  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: checked in
+	  Shigero's fix for my stupid logic
+
+2009-07-24 00:18  soundanalogous
+
+	* Firmata/examples/I2CFirmata/I2CFirmata.pde: Changed baud rate in
+	  I2CFirmata to 57600
+
+2009-07-18 22:03  mayfair
+
+	* Firmata/examples/I2CFirmata/I2CFirmata.pde: modified to be
+	  compiled for 328P boards (replaced PC* with PORTC*)
+
+2009-07-16 00:07  eighthave
+
+	* Firmata/Firmata.h: checked in patch from Paul Stoffregen to add
+	  support for the Teensy boards,
+	  the Sanguino, etc. Ideally, these macros and #ifdefs would go
+	  into the code
+	  for each board, but it seems that Arduino is not quite ready for
+	  that, so
+	  we'll keep it here for now.
+
+2009-07-14 15:06  eighthave
+
+	* Firmata/Firmata.cpp, Firmata/Firmata.h,
+	  Firmata/examples/EchoString/EchoString.pde,
+	  Firmata/examples/I2CFirmata/I2CFirmata.pde,
+	  Firmata/examples/StandardFirmata/StandardFirmata.pde: - added
+	  SHIFT_DATA to Firmata.h to claim for future implementations
+	  - renamed somethings for clarity and consistency (but left old
+	  names in for a bit)
+	  FIRMATA_STRING -> STRING_DATA
+	  SYSEX_I2C_REQUEST -> I2C_REQUEST
+	  SYSEX_I2C_REPLY -> I2C_REPLY
+	  SYSEX_SAMPLING_INTERVAL -> SAMPLING_INTERVAL
+
+2009-07-14 14:04  eighthave
+
+	* Firmata/Firmata.h: added pin macros for the Arduino Mega based on
+	  its AVR ATmeta1280 macro
+
+2009-07-14 03:11  soundanalogous
+
+	* Firmata/examples/I2CFirmata/I2CFirmata.pde: Updated I2CFirmata
+	  example to enable I2C power pins to be enabled using I2C Config
+	  (see Firmata I2C protocol on firmata.org)
+
+2009-07-14 02:52  soundanalogous
+
+	* Firmata/Firmata.h: Added define for I2C_CONFIG and changed
+	  SYSEX_SAMPLING_INTERVAL define to 0x7A
+
+2009-07-10 00:16  eighthave
+
+	* README.txt: minor cleanups
+
+2009-07-10 00:14  eighthave
+
+	* README.txt: added more explicit instructions, including how to
+	  replace the included Firmata library
+
+2009-07-10 00:14  eighthave
+
+	* Firmata/Firmata.h: updated in preparation for first beta release
+
+2009-07-06 13:51  eighthave
+
+	* Firmata/examples/StandardFirmata/Makefile: made the build use the
+	  AVR tools included in the Arduino.app/package and added
+	  needed libs to the include/linking paths but it still doesn't
+	  quite work with
+	  new versions of Arduino.app
+
+2009-07-06 13:49  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: made
+	  analogWriteCallback check the pinStatus to see what action to do
+	  (i.e. PWM, Servo, etc.)
+
+2009-07-03 01:17  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: -
+	  implemented new extended pinMode and INPUT, OUTPUT, ANALOG, PWM,
+	  and SERVO modes
+	  
+	  - switch default bitrate back to 57600
+
+2009-07-03 00:02  eighthave
+
+	* Firmata/Firmata.cpp,
+	  Firmata/examples/AnalogFirmata/AnalogFirmata.pde,
+	  Firmata/examples/EchoString/EchoString.pde,
+	  Firmata/examples/I2CFirmata/I2CFirmata.pde,
+	  Firmata/examples/ServoFirmata/ServoFirmata.pde,
+	  Firmata/examples/SimpleAnalogFirmata/SimpleAnalogFirmata.pde,
+	  Firmata/examples/SimpleDigitalFirmata/SimpleDigitalFirmata.pde:
+	  115200 proved to be too error-prone, so the default will be
+	  reverted to 57600, which matches the new Arduino firmware upload
+	  speed AFAIK
+
+2009-06-26 23:05  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: -
+	  implemented and tested sampling interval message
+	  
+	  - sketched out Servo support, needs testing
+	  
+	  - sketched out updated setPinMode stuff since there are now many
+	  modes (I2C,
+	  Servo, Analog, etc.)
+
+2009-06-26 22:12  eighthave
+
+	* Firmata/Firmata.cpp: switched intenting to GNU style to match the
+	  rest of the code and the Arduino standard
+
+2009-06-15 03:24  eighthave
+
+	* Firmata/Firmata.h, Firmata/examples/I2CFirmata,
+	  Firmata/examples/I2CFirmata/I2CFirmata.pde: first stab at
+	  incorporating Jeff and Shigeru's I2C work into the library
+
+2009-06-15 00:21  eighthave
+
+	* Firmata/examples/StandardFirmata/StandardFirmata.pde: cleaned up
+	  formatting and used GNU intendation style, which seems closest to
+	  Arduino style
+
+2009-01-12 16:09  eighthave
+
+	* Firmata, Firmata/Firmata.cpp, Firmata/Firmata.h,
+	  Firmata/LICENSE.txt, Firmata/TODO.txt, Firmata/examples,
+	  Firmata/examples/AnalogFirmata,
+	  Firmata/examples/AnalogFirmata/AnalogFirmata.pde,
+	  Firmata/examples/AnalogFirmata/Makefile,
+	  Firmata/examples/EchoString,
+	  Firmata/examples/EchoString/EchoString.pde,
+	  Firmata/examples/EchoString/Makefile,
+	  Firmata/examples/ServoFirmata,
+	  Firmata/examples/ServoFirmata/Makefile,
+	  Firmata/examples/ServoFirmata/ServoFirmata.pde,
+	  Firmata/examples/SimpleAnalogFirmata,
+	  Firmata/examples/SimpleAnalogFirmata/Makefile,
+	  Firmata/examples/SimpleAnalogFirmata/SimpleAnalogFirmata.pde,
+	  Firmata/examples/SimpleDigitalFirmata,
+	  Firmata/examples/SimpleDigitalFirmata/Makefile,
+	  Firmata/examples/SimpleDigitalFirmata/SimpleDigitalFirmata.pde,
+	  Firmata/examples/StandardFirmata,
+	  Firmata/examples/StandardFirmata/LICENSE.txt,
+	  Firmata/examples/StandardFirmata/Makefile,
+	  Firmata/examples/StandardFirmata/StandardFirmata.pde,
+	  Firmata/keywords.txt, README.txt: copied newest code from
+	  https://svn.berlios.de/svnroot/repos/arduino/trunk/hardware/libraries/Firmata
+	  to move development here
+
+2009-01-09 21:37  eighthave
+
+	* .: created layout for the Firmata library for Arduino/Wiring
+

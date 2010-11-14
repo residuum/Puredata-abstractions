@@ -1,0 +1,585 @@
+2010-03-18 20:53  eighthave
+
+	* make-release.sh: get pduino version from the arduino.pd file
+
+2010-03-18 20:52  eighthave
+
+	* README.txt: updated install instructions to use Arduino 0018
+
+2010-03-18 03:22  eighthave
+
+	* arduino.pd: added symbol names for pinmode
+
+2010-03-18 03:21  eighthave
+
+	* arduino-test.pd: fixed up logic for reseting the GUI elements
+	  when opening an serial port
+
+2010-03-17 19:38  eighthave
+
+	* arduino-help.pd: documented pinMode and servo stuff and updated
+	  things a bit
+
+2010-03-17 19:25  eighthave
+
+	* arduino-test.pd: cleaned up patch to remove optional analogIns
+	  and digitalIns messages and focus on the pinMode message; also
+	  cleaned up layout to make it clearer
+
+2010-02-19 19:25  eighthave
+
+	* arduino-test.pd: updated so that you can use pins 0 and 1 for
+	  boards like the Teensy
+
+2010-02-09 14:34  eighthave
+
+	* arduino.pd: - made [pinMode INPUT( also send [digitalIns( so that
+	  you only need to switch
+	  a pin to INPUT mode in order to get data
+	  
+	  - removed some extraneous dollarg message boxes that were left
+	  from converting
+	  the messages from byte streams to lists of bytes.
+
+2010-02-09 14:00  eighthave
+
+	* arduino.pd: converted all output messages except digital to lists
+	  instead of bytes so that they get bundled better into USB packets
+
+2009-11-19 22:27  eighthave
+
+	* arduino-help.pd: updated digital input docs to represent the
+	  port-based message, based on enrike's report
+
+2009-10-19 15:28  eighthave
+
+	* make-release.sh: added arg checking
+
+2009-10-07 22:24  eighthave
+
+	* make-release.sh: fixed up script to include ChangeLogs
+
+2009-10-05 22:28  eighthave
+
+	* examples: removed ancient not very useful Pd+Arduino examples to
+	  avoid confusion
+
+2009-10-05 21:29  eighthave
+
+	* make-release.sh: added sed to modify the HTML for new releases
+
+2009-10-05 21:15  eighthave
+
+	* arduino-test.pd: set the radio buttons for the analog pins to
+	  default to the analog setting
+
+2009-08-17 17:02  eighthave
+
+	* make-release.sh: quick script to automate making releases
+
+2009-08-11 22:34  eighthave
+
+	* arduino.pd: fixed bug reported by Christopher Coleman where
+	  inputs on pin 7, 15, 23, etc. were not being reported
+
+2009-07-14 14:26  eighthave
+
+	* arduino.pd: updated sampling-interval command byte value
+
+2009-07-10 04:13  eighthave
+
+	* README.txt: updated readme for release
+
+2009-07-10 04:11  eighthave
+
+	* arduino-test.pd: changed pwm stuff to analog
+
+2009-07-02 23:57  eighthave
+
+	* arduino.pd: 115200 proved to be too error-prone, so the default
+	  will be reverted to 57600, which matches the new firmware upload
+	  speed
+
+2009-07-02 23:35  eighthave
+
+	* arduino.pd: enabled mode pin modes beyond 0 and 1
+
+2009-07-01 21:18  eighthave
+
+	* arduino-test.pd: added GUIs for using analog pins as digital, and
+	  made extended pinMode GUI for new modes
+
+2009-06-26 23:05  eighthave
+
+	* arduino-test.pd, arduino.pd: added support for new
+	  samplingInterval message
+
+2008-11-25 05:56  eighthave
+
+	* arduino-help.pd, arduino-test.pd, arduino.pd: - added a "port"
+	  message for sending a complete port at a time, directly
+	  reflecting the underlying digital message and the fact that
+	  digital outputs
+	  on a microcrontroller are handled on an 8-bit port basis.
+
+2008-11-25 00:07  eighthave
+
+	* arduino.pd: Fixed bug reported by Derek Holzer here:
+	  http://lists.puredata.info/pipermail/pd-list/2008-10/065393.html
+	  
+	  Basically, it needs to keep track of the state of all of the pins
+	  on the
+	  arduino, it was only keeping track per-port, and then using the
+	  state of one
+	  port when outputting another.
+
+2008-09-08 22:59  eighthave
+
+	* arduino-test.pd: implemented GUI reset, so that whenever you
+	  reopen the device, all of the GUIs get reset to their initial
+	  state to match the arduino's state
+
+2008-09-08 21:32  eighthave
+
+	* arduino-test.pd, arduino.pd: - moved protocol version and
+	  firmware name to the status outlet
+
+2008-09-08 21:25  eighthave
+
+	* arduino-test.pd, arduino.pd: - removed old, debug right/cold
+	  inlet from [arduino]
+	  
+	  - converted the right outlet on [arduino] to output status info,
+	  as it should
+	  be. Right now, it is just info directly from [comport].
+
+2008-09-08 21:16  eighthave
+
+	* arduino-test.pd: set pinMode toggles to 1 since StandardFirmata
+	  defaults to OUTPUT mode on digital pins; a couple minor cleanups
+	  as well
+
+2008-08-30 16:10  eighthave
+
+	* arduino.pd: removed some debug float boxes
+
+2008-06-24 17:31  eighthave
+
+	* README, README.txt: added .txt to README to make it easier to use
+	  on all platforms
+
+2008-06-24 17:30  eighthave
+
+	* README: updated readme for release based on Firmata 2.0 protocol
+
+2008-04-17 23:27  eighthave
+
+	* arduino-test.pd, arduino.pd: - implemented v2.0 protocol changes,
+	  including the order change for the
+	  protocol version report
+
+2008-04-14 22:18  eighthave
+
+	* arduino-test.pd, arduino.pd: - working on Firmata v2.0, got
+	  digital inputs and the toggling ofdigital port
+	  reporting working
+
+2008-04-11 22:08  eighthave
+
+	* arduino-test.pd, arduino.pd: First stab at implementing v2 of the
+	  protocol, digitalWrite works, but no luck
+	  yet with digital input. I am not sure if the problem is in Pd or
+	  Firmata.
+
+2008-04-09 22:55  eighthave
+
+	* arduino-test.pd, arduino.pd: implemented both directions of
+	  Firmata string and generic sysex message support
+
+2008-04-08 22:01  eighthave
+
+	* arduino-test.pd, arduino.pd: Implemented firmware reporting and
+	  sysex, sysex isn't fully tested.
+
+2008-03-17 03:42  eighthave
+
+	* Pd_firmware: Removed original Firmata Arduino firmware, since it
+	  is now part of the Arduino
+	  SVN:
+	  
+	  http://svn.berlios.de/svnroot/repos/arduino/trunk/hardware/firmwares/Firmata/
+
+2007-09-24 23:46  eighthave
+
+	* arduino.pd: added namespace prefixes on everything
+
+2007-06-27 20:59  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd: added the [devices(
+	  message to the test patch; applied David Mellis' patch to get
+	  things working with Arduino-0008
+
+2007-04-13 05:28  eighthave
+
+	* Pd_firmware/Makefile, Pd_firmware/Pd_firmware.pde: first working
+	  bits of the Firmata class, just sending analog and digital
+	  messages from the Arduino to the host software, plus printing the
+	  version
+
+2007-04-13 03:55  eighthave
+
+	* Pd_firmware/Makefile, Pd_firmware/Pd_firmware.pde: sketched out
+	  EEPROM library support, but it doesn't work yet ; renamed some
+	  variables for clarity ; made digital pins set to OUTPUT by
+	  default so that you don't get lots of random data, unless you
+	  want it ;)
+
+2007-03-08 06:23  eighthave
+
+	* README: last minute comments
+
+2007-03-08 05:37  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino-test.pd,
+	  arduino.pd: cleaned up for the Pduino 0.3 release
+
+2007-03-06 06:59  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd, arduino.pd: - got
+	  digital inputs working reading by port, sends only on change
+	  - ignore Rx/Tx pins (0 and 1) since they are used for serial/USB
+	  - removed a fair amount of cruft
+
+2007-03-05 17:08  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd, arduino.pd: -
+	  Removed lots of cruft and various attempts at fixing things.
+	  
+	  - Removed timer2 interrupt code because it was interfering with
+	  the hardware
+	  PWM on some pins. Replaced it with timer0_overflow_count from
+	  wiring.c but
+	  that's not fully functional yet, I think I have to get the time
+	  units
+	  right. Right now it seems to just output everytime rather than
+	  every 4ms
+	  
+	  - removed second [arduino] object in arduino-test.pd that was
+	  causing lost
+	  serial data.
+	  
+	  WORKING
+	  - analog input working
+	  - hardware PWM output working
+	  - digital output working
+	  - setPinMode to INPUT/OUTPUT for digital pins working
+	  
+	  NOT WORKING YET
+	  - digital inputs
+	  - software PWM on non-hardware-PWM pins
+	  - save state to EEPROM
+
+2007-03-05 04:34  eighthave
+
+	* Pd_firmware/Makefile, Pd_firmware/Pd_firmware.pde: got 'report
+	  analog ports' working, but the analog data reporting isn't
+	  working properly yet
+
+2007-03-01 05:39  eighthave
+
+	* Pd_firmware/Makefile, Pd_firmware/Pd_firmware.pde,
+	  Pd_firmware/press.wav, arduino.pd: analog input is kind of
+	  working; pinMode is working; digital output is working; things
+	  are timer driven now
+
+2007-02-28 04:10  eighthave
+
+	* Pd_firmware/Makefile, Pd_firmware/press.wav: added voice prompt
+	  to press the reset button so that avrdude can upload the new
+	  firmware
+
+2007-02-28 04:02  eighthave
+
+	* Pd_firmware/Makefile: added etags
+
+2007-02-28 03:51  eighthave
+
+	* Pd_firmware/Makefile: edited makefile from Arduino package to
+	  work with this firmware
+
+2007-02-22 06:16  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd, arduino.pd: - got
+	  analog input working
+	  - version reporting works, but checkInput() isn't run enough, so
+	  it misses the
+	  data if there is a lot of traffic on the serial port
+
+2007-02-20 06:25  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: stripped down to nothing and started
+	  to rebuild from scratch; got digital output working
+
+2006-12-06 03:29  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: - fixed
+	  up help file so that everything loads with Pd-extended
+	  - fixed up [arduino] so that everything loads with Pd-extended
+	  - started to clean up the firmware and wrote lots of TODOs
+
+2006-11-01 02:24  mrpeach
+
+	* PICduino/f767duino.mcp: The project file for MPLab
+
+2006-11-01 02:23  mrpeach
+
+	* PICduino/f767duino.mcw: The workspace for MPAsm with associated
+	  project this time...
+
+2006-11-01 02:21  mrpeach
+
+	* PICduino/f767duino.asm: changed comments
+
+2006-10-31 01:05  eighthave
+
+	* arduino-test.pd, arduino.pd: added [digital 5 1( messages for
+	  digital input
+
+2006-10-31 01:04  eighthave
+
+	* arduino-stress-test.pd: quick stress test patch, watch out for
+	  zombies!
+
+2006-10-31 00:39  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: - digital inputs are now only sent
+	  upon change
+	  - finished conversion to new Serial class API
+	  - upped baud rate to full speed: 115200
+
+2006-10-31 00:33  eighthave
+
+	* arduino-test.pd, arduino.pd: got analog inputs converted to new
+	  message format, the foundation is laid for digital inputs...
+
+2006-10-30 16:04  mrpeach
+
+	* PICduino/f767duino.HEX: The new hex file.
+
+2006-10-30 16:02  mrpeach
+
+	* PICduino/f767duino.asm: Added hardware PWM on digital pins
+	  9,10,11
+
+2006-10-30 05:44  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: removed unimplemented software PWM
+	  stuff for cleanliness; made arduino blink pin 13 on startup to
+	  represent the protocol version
+
+2006-10-30 05:36  eighthave
+
+	* arduino-help.pd, arduino-test.pd, arduino.pd: switched over to
+	  [digital 5 1( message format for output, . next for the hard
+	  part, switch over analog and digital to this message format
+
+2006-10-28 19:33  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: ported to new Serial object API and
+	  added support for more analog ins for the ATMEGA168 boards
+
+2006-10-17 20:28  mrpeach
+
+	* arduino-help.pd, arduino.pd: Updated to reflect new comport and
+	  pduino firmware
+
+2006-10-17 20:26  mrpeach
+
+	* PICduino, PICduino/P16F767.INC, PICduino/f767duino.HEX,
+	  PICduino/f767duino.asm, PICduino/f767duino.mcw,
+	  PICduino/picduino.png: The PIC version of the arduino
+
+2006-09-29 04:55  eighthave
+
+	* arduino-test.pd: added 'hardware' to the [import] so that
+	  [arduino] will load
+
+2006-09-15 12:38  eighthave
+
+	* README: updated for release 0.1
+
+2006-09-15 05:22  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino-test.pd,
+	  arduino.pd: redesigned the input protocol to be a 3-byte
+	  sequence, the first byte is the
+	  data type, the second two are the data. The second two bytes are
+	  then
+	  combined to give one 14-bit value.
+	  
+	  For example 240 0 1 (from serial) == [version 1( (Pd message)
+	  
+	  arduino-test.pd was updated for this, the help patch was not, but
+	  should be
+	  largely correct. I only tightened up the layout of the help
+	  patch.
+
+2006-09-04 15:43  grholzi
+
+	* Pd_firmware/Pd_firmware.pde: some fixes in the firmware for PWM
+
+2006-09-04 15:42  grholzi
+
+	* arduino-help.pd, arduino.pd: better helpfile and some fixes
+
+2006-09-04 07:44  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd: switched to default
+	  to output mode so that you don't see voltage float on
+	  disconnected pins; changed test patch init settings to reflect
+	  initial state of arduino
+
+2006-09-03 22:38  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-test.pd, arduino.pd:
+	  arduino-test.pd
+
+2006-08-27 03:36  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd: attempts at getting
+	  pwm working again; some cleanups
+
+2006-08-27 02:09  eighthave
+
+	* arduino-help.pd, arduino.pd: digital output and digital pin mode
+	  toggling work again
+
+2006-08-25 06:18  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: got
+	  digital inputs working, but needed to make some changes on the
+	  order of data coming in, including the analog data
+
+2006-08-24 14:48  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: minor
+	  cleanups and commenting on the firmware; got Pd code working with
+	  new protocol; digital inputs still aren't transmitted/received
+	  correctly
+
+2006-08-24 05:54  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: Jamie
+	  Allen's and my cleanups compile and install, but I don't know if
+	  they work yet
+
+2006-06-24 00:43  eighthave
+
+	* arduino-help.pd, arduino.pd: added outputMode messages and
+	  examples for using [bytemask] to set digital output pins
+
+2006-06-24 00:41  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: an attempt to fix the bug outlined
+	  by Alexandre Quessy; I got it quite wrong the first time, but I
+	  think this looks right
+
+2006-05-24 18:41  eighthave
+
+	* Pd_firmware/Pd_firmware.pde: updated protocol docs
+
+2006-05-22 18:19  eighthave
+
+	* arduino-help.pd, arduino.pd: added somethings for testing
+
+2006-05-22 17:13  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd:
+	  expanded [arduino] object and cleaned up the help patch;
+	  commented Arduino code and enabled digitalInput, tho it doesn't
+	  seem to work yet; it seems that there are bugs in [comport] since
+	  I can make it crash with the stress test with the new OVERLAPPED
+	  mode, and the older synchronous mode
+
+2006-05-21 17:37  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: its now
+	  possible to turn on and off digital and analog input, so you can
+	  stop arduino from sending data alltoger, while still responding;
+	  digitalInputs are still not tested
+
+2006-05-20 16:26  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: looks
+	  like analog input is working fine, next, the digital inputs need
+	  to be tested.
+
+2006-05-20 15:50  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd: all outputs seem to
+	  be working, now its time to test all of the inputs; cleaned up
+	  some cruft too
+
+2006-05-20 15:29  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: its
+	  messy, but digital output and PWM now work at the same time
+
+2006-05-20 10:18  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino-help.pd, arduino.pd: got PWM
+	  control working from Pd
+
+2006-05-19 12:54  eighthave
+
+	* Pd_firmware/Pd_firmware.pde, arduino.pd: worked out 2-way
+	  protocol, everything seems to work from Pd; the data sending is
+	  commented out, but it should still work...
+
+2006-05-18 20:24  eighthave
+
+	* Pd_firmware, Pd_firmware/Pd_firmware.pde, README: first sketch of
+	  Pd-controlled firmware
+
+2006-05-18 20:22  eighthave
+
+	* examples/PD_inputs_to_PD.pd, examples/PD_send_potentiometer.pd,
+	  examples/PD_two_potentiometers.pd: fixed serial port fixer to
+	  have more ports and to start at 0, like [comport]
+
+2006-03-14 22:31  eighthave
+
+	* examples/PD_all_inputs.pd, examples/Pd_Input/Pd_Input.pde: got
+	  the basics of the byte-based speedy firmware working, now I got
+	  to get the Pd patch working with this firmware
+
+2006-03-11 04:35  eighthave
+
+	* examples/PD_all_inputs.pd, examples/Pd_Input/Pd_Input.pde: got
+	  the firmware for the high-speed protocol sketched out, now I need
+	  to figure out the div/mod byte format
+
+2006-03-11 02:04  eighthave
+
+	* examples/PD_inputs_to_PD.pd, examples/PD_send_potentiometer.pd,
+	  examples/PD_two_potentiometers.pd: rewrote PD_inputs_to_PD.pd
+	  using PD_two_potentiometers as a starting place, but made
+	  improvements on the algorithm; added GPL statement to all
+
+2006-03-05 06:48  eighthave
+
+	* examples/PD_all_inputs.pd, examples/PD_inputs_to_PD.pd,
+	  examples/PD_send_potentiometer.pd,
+	  examples/PD_two_potentiometers.pd, examples/Pd_Input,
+	  examples/Pd_Input/Pd_Input.pde: some example patches for the
+	  existing puredata firmwares, and the start of firmware for
+	  getting all inputs into Pd as fast as possible. Some clean-up
+	  needed before a real release
+
+2006-03-04 22:21  eighthave
+
+	* ., examples, examples/PD_inputs_to_PD.pd,
+	  examples/PD_send_potentiometer.pd: PD_send_potentiometer.pd now
+	  works with the arduino firmware of the same name;
+	  PD_inputs_to_PD.pd still needs some work
+
