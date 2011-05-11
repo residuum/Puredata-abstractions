@@ -1,0 +1,30 @@
+#N canvas 282 65 450 300 10;
+#X obj 134 96 metro 1;
+#X obj 134 131 f;
+#X obj 172 130 + 1;
+#X obj 120 164 f;
+#X msg 195 94 0;
+#X obj 190 29 t b b;
+#X obj 190 -17 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 129 29 t b b;
+#X obj 129 -17 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 216 52 stop;
+#X obj 125 228 outlet;
+#X obj 119 193 expr 1000/$f1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 1;
+#X connect 2 0 1 1;
+#X connect 3 0 11 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 5 1 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X connect 7 1 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 120 40 1 120 -20;
