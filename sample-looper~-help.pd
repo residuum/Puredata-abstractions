@@ -1,8 +1,8 @@
 #N canvas 0 0 878 577 10;
-#X obj 222 262 sample-looper~;
+#X obj 218 242 sample-looper~;
 #X obj 284 144 *~;
 #X msg 21 536 \; pd dsp 1;
-#X obj 215 393 dac~ 1 2;
+#X obj 216 435 dac~ 1 2;
 #X msg 21 143 rec start;
 #X msg 95 144 rec stop;
 #X msg 157 148 play start;
@@ -13,14 +13,14 @@
 #X msg 417 176 0.1;
 #X text 27 112 start / stop recording and playpack;
 #X text 344 146 playback speed;
-#X msg 420 97 bang;
+#X msg 509 173 bang;
 #X obj 289 40 osc~ 150;
 #X obj 302 96 phasor~ 1;
-#X text 375 63 bang for restart of playback at loop start position
+#X text 503 131 bang for restart of playback at loop start position
 ;
-#X obj 400 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 408 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 333 416 outputs a bang at loop end;
+#X text 341 452 outputs a bang at loop end;
 #X connect 0 0 3 0;
 #X connect 0 0 3 1;
 #X connect 0 1 18 0;
