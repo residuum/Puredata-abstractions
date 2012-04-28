@@ -1,23 +1,23 @@
-#N canvas 681 194 602 300 10;
+#N canvas 679 192 602 300 10;
 #X obj 33 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 211 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 34 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 57 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 69 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 83 239 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 123 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 105 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 167 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 141 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 201 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 177 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 191 40 right input is routed to output according to radio buttons
+#X obj 213 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 205 47 right input is routed to output according to radio buttons
 ;
-#X text 12 17 left inlet switches the radio buttons;
+#X text 13 12 left inlet switches the radio buttons;
 #X obj 34 102 shift-router;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;

@@ -1,30 +1,30 @@
-#N canvas 0 0 622 382 10;
-#X obj 52 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 44 51 775 479 10;
+#X obj 47 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 79 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 89 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 102 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 131 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 126 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 173 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 156 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 215 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 178 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 257 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 55 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 47 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 82 321 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 89 321 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 105 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 131 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 129 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 173 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 159 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 215 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 181 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 257 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 53 119 switch-matrix-6x6;
-#X text 261 146 Routes messages from up to 6 inlets to up to 6 outlets
+#X obj 47 83 switch-matrix-6x6;
+#X text 294 138 Routes messages from up to 6 inlets to up to 6 outlets
 according to switches with values =1. Lines correspond to outlets \,
 rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
 from inlet 5 to outlet 3;
