@@ -1,28 +1,31 @@
-#N canvas 0 0 742 474 10;
+#N canvas 44 51 742 575 10;
 #X msg 21 143 rec start;
 #X msg 95 144 rec stop;
 #X msg 155 145 play start;
 #X msg 206 173 play stop;
 #X msg 347 167 1;
 #X msg 379 170 10;
-#X msg 417 176 0.1;
+#X msg 411 167 0.1;
 #X text 27 112 start / stop recording and playpack;
 #X text 344 146 playback speed;
 #X msg 420 97 bang;
-#X text 414 64 bang for restart of playback at loop start position
+#X text 414 77 bang for restart of playback at loop start position
 ;
-#X obj 400 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 399 461 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 398 416 outputs a bang at loop end;
-#X obj 222 262 note-vel-looper;
-#X floatatom 210 406 5 0 0 0 - - -;
-#X floatatom 311 409 5 0 0 0 - - -;
-#X text 206 420 note;
-#X text 308 426 velocity;
+#X text 394 477 outputs a bang at loop end;
+#X obj 206 243 note-vel-looper;
+#X floatatom 206 460 5 0 0 0 - - -;
+#X floatatom 302 459 5 0 0 0 - - -;
+#X text 202 474 note;
+#X text 299 476 velocity;
 #X text 240 216 note;
-#X text 295 212 velocity;
-#X obj 279 85 notein;
-#X obj 270 135 stripnote;
+#X text 276 219 velocity;
+#X obj 244 85 notein;
+#X obj 244 135 stripnote;
+#X obj 360 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 353 19 Enable additional recording during playback;
 #X connect 0 0 13 0;
 #X connect 1 0 13 0;
 #X connect 2 0 13 0;
@@ -30,7 +33,7 @@
 #X connect 4 0 13 3;
 #X connect 5 0 13 3;
 #X connect 6 0 13 3;
-#X connect 9 0 13 4;
+#X connect 9 0 13 5;
 #X connect 13 0 14 0;
 #X connect 13 1 15 0;
 #X connect 13 2 11 0;
@@ -38,3 +41,4 @@
 #X connect 20 1 21 1;
 #X connect 21 0 13 1;
 #X connect 21 1 13 2;
+#X connect 22 0 13 4;
