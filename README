@@ -38,6 +38,8 @@ note-vel-looper: records and plays back MIDI loops with adjustable
 start and stop, can be synchronized with other instances of itself and
 sample-looper~ instances.
 
+pan~: equal volume pan for mono.
+
 phaser~: simple phaser effect, not to be confused with the built-in
 sawtooth oscillator (phasor~)
 
@@ -75,8 +77,7 @@ for switching two spigot objects.
 timer-to-freq: measures the time between a bang on the left side and
 the right side and converts the timespan to frequency.
 
-timestretch~: stretches time of a sample while preserving the pitch,
-may have granular sounds as a side effect.
-
 trigger-filter: filters a stream of 0s and 1s and only outputs a value
 when a change is occuring.
+
+waveshaper~: simple waveshaper effect.
