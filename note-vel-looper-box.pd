@@ -1,4 +1,4 @@
-#N canvas 561 230 428 532 10;
+#N canvas 557 226 428 532 10;
 #X obj 31 128 rec_play_switch;
 #X obj 31 93 inlet;
 #X obj 100 93 inlet;

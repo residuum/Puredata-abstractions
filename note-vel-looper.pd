@@ -1,25 +1,25 @@
-#N canvas 449 51 892 574 10;
+#N canvas 431 51 892 574 10;
 #X obj 16 34 route rec play;
 #X obj 16 3 inlet;
 #X obj 16 76 sel start stop;
 #X obj 407 68 sel start stop;
 #X obj 16 55 list \$1;
 #X obj 407 44 list \$1;
-#X obj 679 162 hsl 128 30 0 399 0 0 \$0-start-s \$0-start start 138
-16 0 10 -262144 -258113 -1 0 1;
-#X obj 679 235 hsl 128 30 0.01 10 1 1 \$0-speed-s \$0-speed speed 138
+#X obj 670 155 hsl 128 30 0 976 0 0 \$0-start-s \$0-start start 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 670 221 hsl 128 30 0.01 10 1 1 \$0-speed-s \$0-speed speed 136
 15 0 10 -262144 -258113 -1 8467 1;
 #X obj 452 3 inlet;
 #X obj 837 513 outlet;
 #X obj 714 6 inlet;
 #X obj 821 108 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
--262144 -4160 -1;
+-262144 -1 -1;
 #X obj 260 1 inlet;
-#X obj 676 124 tgl 32 0 \$0-record-s \$0-record empty 17 7 0 10 -262144
--1 -1 0 1;
+#X obj 667 119 tgl 32 0 \$0-record-s \$0-record empty 17 7 0 10 -262144
+-1 -1 1 1;
 #X obj 714 49 s \$0-reset;
 #X obj 483 195 r \$0-reset-s;
-#X obj 679 198 hsl 128 30 0 399 0 0 \$0-stop-s \$0-stop stop 138 15
+#X obj 670 188 hsl 128 30 0 976 0 0 \$0-stop-s \$0-stop stop 136 15
 0 10 -262144 -258113 -1 12700 1;
 #X obj 260 116 spigot;
 #X obj 293 82 r \$0-record-s;
@@ -75,6 +75,8 @@
 #X obj 12 104 t b b b b;
 #X obj 419 417 tabwrite \$0-velocity;
 #X msg 85 238 \; \$1-velocity const 0;
+#X obj 153 410 s \$0-pos-s;
+#X msg 153 383 range 0 \$1;
 #X connect 0 0 23 0;
 #X connect 1 0 14 0;
 #X connect 2 0 9 0;
@@ -89,6 +91,7 @@
 #X connect 11 0 9 1;
 #X connect 11 0 20 0;
 #X connect 11 0 24 1;
+#X connect 11 0 27 0;
 #X connect 12 0 11 1;
 #X connect 13 0 11 1;
 #X connect 14 0 10 0;
@@ -105,9 +108,10 @@
 #X connect 23 1 12 0;
 #X connect 23 2 5 0;
 #X connect 23 3 7 0;
+#X connect 27 0 26 0;
 #X restore 17 428 pd record;
 #X obj 630 49 s \$0-record;
-#N canvas 321 177 350 322 filter-note-on-off 0;
+#N canvas 317 227 350 322 filter-note-on-off 1;
 #X obj 35 43 inlet;
 #X obj 156 42 inlet;
 #X obj 69 252 outlet;
@@ -122,6 +126,8 @@
 #X obj 159 124 sel;
 #X obj 201 204 f;
 #X obj 174 151 t b f;
+#X obj 37 277 print note;
+#X obj 128 282 print vel;
 #X connect 0 0 4 0;
 #X connect 1 0 9 0;
 #X connect 4 0 5 1;
@@ -130,6 +136,7 @@
 #X connect 5 0 6 1;
 #X connect 6 1 8 0;
 #X connect 7 0 2 0;
+#X connect 7 0 14 0;
 #X connect 8 0 7 0;
 #X connect 8 1 12 0;
 #X connect 9 0 10 1;
@@ -138,15 +145,22 @@
 #X connect 10 0 11 1;
 #X connect 11 1 13 0;
 #X connect 12 0 3 0;
+#X connect 12 0 15 0;
 #X connect 13 0 7 0;
 #X connect 13 1 12 0;
 #X restore 407 475 pd filter-note-on-off;
+#X obj 670 257 hsl 128 15 0 976 0 0 empty \$0-pos-s position 136 7
+0 10 -228856 -1 -1 4047 1;
+#X obj 528 308 s \$0-pos-s;
+#X obj 630 26 bangonce 400;
+#X obj 302 442 stripnote;
+#X obj 407 94 t b b;
 #X connect 0 0 4 0;
 #X connect 0 1 5 0;
 #X connect 1 0 0 0;
 #X connect 2 0 43 0;
 #X connect 2 1 43 1;
-#X connect 3 0 21 0;
+#X connect 3 0 50 0;
 #X connect 3 1 25 0;
 #X connect 4 0 2 0;
 #X connect 5 0 3 0;
@@ -156,7 +170,7 @@
 #X connect 15 0 9 0;
 #X connect 15 0 27 0;
 #X connect 17 0 43 2;
-#X connect 17 0 45 0;
+#X connect 17 0 49 0;
 #X connect 18 0 17 1;
 #X connect 18 0 40 1;
 #X connect 21 0 26 0;
@@ -167,6 +181,7 @@
 #X connect 25 0 21 0;
 #X connect 26 0 28 0;
 #X connect 26 0 30 0;
+#X connect 26 0 47 0;
 #X connect 27 0 26 1;
 #X connect 28 0 26 1;
 #X connect 29 0 45 0;
@@ -180,10 +195,15 @@
 #X connect 35 0 34 0;
 #X connect 36 0 22 0;
 #X connect 38 0 40 0;
-#X connect 39 0 44 0;
+#X connect 39 0 48 0;
 #X connect 40 0 43 3;
-#X connect 40 0 45 1;
+#X connect 40 0 49 1;
 #X connect 42 0 45 1;
 #X connect 45 0 19 0;
 #X connect 45 1 41 0;
+#X connect 48 0 44 0;
+#X connect 49 0 19 0;
+#X connect 49 1 41 0;
+#X connect 50 0 21 0;
+#X connect 50 1 27 0;
 #X coords 0 -1 1 1 200 175 1 660 100;

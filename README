@@ -77,6 +77,8 @@ for switching two spigot objects.
 timer-to-freq: measures the time between a bang on the left side and
 the right side and converts the timespan to frequency.
 
+triangle~: Triangle wave oscillator.
+
 trigger-filter: filters a stream of 0s and 1s and only outputs a value
 when a change is occuring.
 

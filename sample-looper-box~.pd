@@ -1,4 +1,4 @@
-#N canvas 729 51 471 627 10;
+#N canvas 721 51 471 627 10;
 #X obj 31 174 sample-looper~;
 #X obj 30 472 *~ 1;
 #X obj 79 384 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144

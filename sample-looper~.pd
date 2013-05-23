@@ -1,4 +1,4 @@
-#N canvas 326 58 903 629 10;
+#N canvas 304 51 903 629 10;
 #X msg 368 161 0;
 #X obj 189 0 inlet~;
 #X obj 257 586 outlet~;
@@ -7,12 +7,12 @@
 #X obj 271 105 sel start stop;
 #X obj 271 83 list \$1;
 #X obj 350 364 phasor~ 0;
-#X obj 651 150 hsl 128 30 0 48554.1 0 0 \$0-start-s \$0-start start
-138 16 0 10 -262144 -258113 -1 0 1;
-#X obj 651 186 hsl 128 30 0 48554.1 0 0 \$0-stop-s \$0-stop stop 138
-16 0 10 -262144 -258113 -1 0 1;
+#X obj 651 150 hsl 128 30 0 82908 0 0 \$0-start-s \$0-start start 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 651 183 hsl 128 30 0 82908 0 0 \$0-stop-s \$0-stop stop 136
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 351 403 *~ 1;
-#X obj 45 404 table \$0-sample 4.41e+06;
+#X obj 27 332 table \$0-sample 4.41e+06;
 #X obj 259 438 +~ 0;
 #X text 298 439 offset;
 #X obj 247 -1 inlet;
@@ -23,11 +23,11 @@
 #X obj 443 392 fexpr~ $x[0] < $x[-1];
 #X obj 443 432 threshold~ 0.5 1 0.1 1;
 #X obj 804 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
--262144 -4160 -1;
-#X obj 651 222 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 138
-20 0 10 -262144 -258113 -1 0 1;
-#X obj 652 260 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 138
-20 0 10 -262144 -258113 -1 0 1;
+-262144 -1 -1;
+#X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 651 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 118 164 r \$0-stop-s;
@@ -134,7 +134,7 @@
 #X obj 443 473 s \$0-reset;
 #X msg 341 160 0;
 #X msg 290 161 1;
-#X obj 45 444 table \$0-hanning 256;
+#X obj 27 372 table \$0-hanning 256;
 #N canvas 44 51 443 256 write-hanning 0;
 #X msg 142 80 0;
 #X obj 36 129 osc~;
@@ -156,7 +156,7 @@
 #X connect 5 0 8 0;
 #X connect 6 0 5 0;
 #X connect 7 0 1 0;
-#X restore 49 482 pd write-hanning;
+#X restore 26 399 pd write-hanning;
 #N canvas 44 51 526 599 read-table 0;
 #X obj 89 83 / 256;
 #X obj 89 56 * 44100;
@@ -208,20 +208,32 @@
 #X restore 258 489 pd read-table;
 #X obj 333 463 r \$0-pitch-s;
 #X obj 257 554 *~ 0;
-#X obj 341 132 t b b b;
 #X obj 271 132 t b b b b;
 #X msg 278 523 1;
 #X msg 320 523 0;
+#X obj 651 281 hsl 128 15 0 1 0 0 empty \$0-pos position 136 7 0 10
+-228856 -1 -1 0 1;
+#X obj 168 472 s \$0-pos;
+#X obj 168 442 snapshot~;
+#X obj 168 406 metro 10;
+#X obj 168 375 loadbang;
+#X obj 341 132 t b b b b;
+#X obj 656 379 gcanvas 100 100;
+#X msg 656 355 size 100 100;
+#X floatatom 717 564 5 0 0 0 - - -;
+#X floatatom 544 534 5 0 0 0 - - -;
+#X obj 652 507 expr pow(10 \, $f1/100);
 #X connect 0 0 7 0;
 #X connect 1 0 28 1;
 #X connect 3 0 28 0;
 #X connect 3 1 6 0;
 #X connect 4 0 3 0;
-#X connect 5 0 40 0;
-#X connect 5 1 39 0;
+#X connect 5 0 39 0;
+#X connect 5 1 47 0;
 #X connect 6 0 5 0;
 #X connect 7 0 10 0;
 #X connect 7 0 19 0;
+#X connect 7 0 44 0;
 #X connect 10 0 12 0;
 #X connect 12 0 36 0;
 #X connect 14 0 28 2;
@@ -246,13 +258,21 @@
 #X connect 36 0 38 0;
 #X connect 37 0 36 1;
 #X connect 38 0 2 0;
-#X connect 39 0 32 0;
-#X connect 39 1 0 0;
-#X connect 39 2 42 0;
-#X connect 40 0 29 0;
-#X connect 40 1 33 0;
-#X connect 40 2 16 0;
-#X connect 40 3 41 0;
+#X connect 39 0 29 0;
+#X connect 39 1 33 0;
+#X connect 39 2 16 0;
+#X connect 39 3 40 0;
+#X connect 40 0 38 1;
 #X connect 41 0 38 1;
-#X connect 42 0 38 1;
+#X connect 44 0 43 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
+#X connect 47 0 32 0;
+#X connect 47 1 0 0;
+#X connect 47 2 41 0;
+#X connect 47 3 16 0;
+#X connect 48 0 51 0;
+#X connect 48 0 52 0;
+#X connect 49 0 48 0;
+#X connect 52 0 50 0;
 #X coords 0 -1 1 1 200 175 1 640 125;
