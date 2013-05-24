@@ -18,6 +18,8 @@
 #X obj 114 339 sin;
 #X obj 201 282 *;
 #X obj 201 305 sin;
+#X obj 349 194 bng 30 250 50 0 empty empty rst 34 16 0 10 -262144 -1
+-1;
 #X connect 0 0 7 0;
 #X connect 0 0 8 0;
 #X connect 3 0 4 0;
@@ -38,4 +40,5 @@
 #X connect 15 0 8 1;
 #X connect 16 0 17 0;
 #X connect 17 0 7 1;
-#X coords 0 -1 1 1 139 47 1 198 180;
+#X connect 18 0 10 0;
+#X coords 0 -1 1 1 205 47 1 198 180;
