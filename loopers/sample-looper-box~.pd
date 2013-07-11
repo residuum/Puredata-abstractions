@@ -1,10 +1,9 @@
-#N canvas 709 51 471 627 10;
+#N canvas 707 51 471 627 10;
 #X obj 31 174 sample-looper~;
 #X obj 30 472 *~ 1;
 #X obj 41 353 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
 -1 -1 6350 1;
 #X msg 183 423 1;
-#X obj 31 128 rec_play_switch;
 #X obj 181 353 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
 -1;
 #X obj 31 93 inlet;
@@ -12,16 +11,17 @@
 #X obj 239 99 inlet;
 #X obj 162 95 inlet~;
 #X obj 31 499 outlet~;
-#X obj 239 499 outlet;
+#X obj 224 486 outlet;
+#X obj 31 128 ../glue/rec_play_switch;
 #X connect 0 0 1 0;
-#X connect 0 1 11 0;
-#X connect 1 0 10 0;
+#X connect 0 1 10 0;
+#X connect 1 0 9 0;
 #X connect 2 0 1 1;
 #X connect 3 0 2 0;
-#X connect 4 0 0 0;
-#X connect 5 0 3 0;
-#X connect 6 0 4 0;
-#X connect 7 0 4 1;
-#X connect 8 0 0 2;
-#X connect 9 0 0 1;
+#X connect 4 0 3 0;
+#X connect 5 0 11 0;
+#X connect 6 0 11 1;
+#X connect 7 0 0 2;
+#X connect 8 0 0 1;
+#X connect 11 0 0 0;
 #X coords 0 -1 1 1 205 272 2 28 125;

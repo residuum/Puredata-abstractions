@@ -5,63 +5,34 @@ This is a collection of abstractions that I have made for Puredata. I use
 the Pd convention for adding a trailing tilde (~) to all objects, that
 output or process audio. A lot of objects have accompaning help patches.
 
-303-saw~: a sawtooth oscillator and envelope following low pass filter
-for acid sounds, but unfortunately not really similar to 303.
 
+Glue objects (glue)
+-------------------
 bangonce: outputs only one bang, if the inlet receives a series of
 1s. Useful for filtering MIDI data or data coming a comport object like
 an arduino.
 
 between: outputs a random float between two pre-defined values
 
-bitcrusher~: simple bitcrusher effect.
-
 bpmtoms: converts beats per minute to milliseconds for each beat,
 inverse of mstobpm.
-
-distortion~: simple distortion effect.
-
-hoover~, hoover2~, hoover3~, hoover-phasor~: simple bass synth objects
-for Dubstep basslines.
 
 mstobpm: converts milliseconds for a beat to beats per minute, inverse
 of bpmtoms.
 
 mstofreq: converts milliseconds to a frequency.
 
-normalize~: normalizes the sound and removes offset.
-
 note-vel-filter: filters a stream of MIDI data to only capture MIDI on,
 off and velocity.
 
-note-vel-looper: records and plays back MIDI loops with adjustable
-start and stop, can be synchronized with other instances of itself and
-sample-looper~ instances.
-
-pan~: equal volume pan for mono.
-
-phaser~: simple phaser effect, not to be confused with the built-in
-sawtooth oscillator (phasor~)
-
-pitchshift~, pitchshift2~: simple pitchshifter, each with its own
-residual effects.
-
-pulsewidth~: pulse oscillator with pulsewidth modulation.
-
 rec_play_switch: two switches for starting recording and playing loops
 for note-vel-looper and sample-looper~
-
-sample-looper~: records and plays back audio loops with adjustable start,
-stop and playback speed, can be synchronized with other instances of
-itself and note-vel-looper instances.
 
 symbollen: gets the length of a symbol.
 
 shift-router: routes input to one of six outlets with another input
 for switching the outlets, useful for usage with push-buttons on an
 arduino etc.
-
-squarewave~: squarewave oscillator.
 
 switch-bang: outputs bang alternatively on two outlets when receiving
 a bang.
@@ -77,9 +48,51 @@ for switching two spigot objects.
 timer-to-freq: measures the time between a bang on the left side and
 the right side and converts the timespan to frequency.
 
-triangle~: Triangle wave oscillator.
-
 trigger-filter: filters a stream of 0s and 1s and only outputs a value
 when a change is occuring.
 
+
+Effects and Mixing (fx)
+-----------------------
+bitcrusher~: simple bitcrusher effect.
+
+distortion~: simple distortion effect.
+
+normalize~: normalizes the sound and removes offset.
+
+pan~: equal volume pan for mono.
+
+phaser~: simple phaser effect, not to be confused with the built-in
+sawtooth oscillator (phasor~)
+
+pitchshift~, pitchshift2~: simple pitchshifter, each with its own
+residual effects.
+
 waveshaper~: simple waveshaper effect.
+
+
+Sound synthesis (synth)
+-----------------------
+303-saw~: a sawtooth oscillator and envelope following low pass filter
+for acid sounds, but unfortunately not really similar to 303.
+
+hoover~, hoover2~, hoover3~, hoover-phasor~: simple bass synth objects
+for Dubstep basslines.
+
+pulsewidth~: pulse oscillator with pulsewidth modulation.
+
+squarewave~: squarewave oscillator.
+
+triangle~: Triangle wave oscillator.
+
+
+Looper objects (loopers)
+------------------------
+note-vel-looper, note-vel-looper-box: records and plays back MIDI loops with adjustable
+start and stop, can be synchronized with other instances of itself and
+sample-looper~ instances.
+
+sample-looper~, sample-looper-box~: records and plays back audio loops with adjustable start,
+stop and playback speed, can be synchronized with other instances of
+itself and note-vel-looper instances.
+
