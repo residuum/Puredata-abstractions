@@ -6,8 +6,8 @@ the Pd convention for adding a trailing tilde (~) to all objects, that
 output or process audio. A lot of objects have accompaning help patches.
 
 
-Glue objects (glue)
--------------------
+Glue objects (glue) 
+------------------- 
 bangonce: outputs only one bang, if the inlet receives a series of
 1s. Useful for filtering MIDI data or data coming a comport object like
 an arduino.
@@ -52,8 +52,8 @@ trigger-filter: filters a stream of 0s and 1s and only outputs a value
 when a change is occuring.
 
 
-Effects and Mixing (fx)
------------------------
+Effects and Mixing (fx) 
+----------------------- 
 bitcrusher~: simple bitcrusher effect.
 
 distortion~: simple distortion effect.
@@ -71,8 +71,8 @@ residual effects.
 waveshaper~: simple waveshaper effect.
 
 
-Sound synthesis (synth)
------------------------
+Sound synthesis (synth) 
+----------------------- 
 303-saw~: a sawtooth oscillator and envelope following low pass filter
 for acid sounds, but unfortunately not really similar to 303.
 
@@ -86,13 +86,13 @@ squarewave~: squarewave oscillator.
 triangle~: Triangle wave oscillator.
 
 
-Looper objects (loopers)
-------------------------
-note-vel-looper, note-vel-looper-box: records and plays back MIDI loops with adjustable
-start and stop, can be synchronized with other instances of itself and
-sample-looper~ instances.
+Looper objects (loopers) 
+------------------------ 
+note-vel-looper, note-vel-looper-box: records and plays back MIDI loops
+with adjustable start and stop, can be synchronized with other instances
+of itself and sample-looper~ instances.
 
-sample-looper~, sample-looper-box~: records and plays back audio loops with adjustable start,
-stop and playback speed, can be synchronized with other instances of
-itself and note-vel-looper instances.
+sample-looper~, sample-looper-box~: records and plays back audio loops
+with adjustable start, stop and playback speed, can be synchronized with
+other instances of itself and note-vel-looper instances.
 
