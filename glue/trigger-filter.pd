@@ -1,8 +1,8 @@
-#N canvas 0 0 237 430 10;
+#N canvas 44 78 237 430 10;
 #X obj 44 43 t f f f;
-#X obj 18 74 - 1;
-#X obj 18 100 abs;
-#X obj 38 131 sel 0;
+#X obj 57 80 - 1;
+#X obj 57 106 abs;
+#X obj 30 131 sel 0;
 #X obj 68 164 f;
 #X obj 44 9 inlet;
 #X obj 68 199 outlet;

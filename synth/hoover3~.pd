@@ -1,4 +1,5 @@
-#N canvas 545 280 659 621 10;
+#N canvas 543 143 659 621 10;
+#X declare -lib bsaylor -lib creb;
 #X obj 33 -17 inlet;
 #X obj 134 -23 inlet;
 #X obj 253 -18 inlet;
@@ -40,6 +41,7 @@
 #X obj 130 343 +~;
 #X obj 353 119 * 0.93;
 #X obj 446 115 * 1.21;
+#X obj 376 538 import bsaylor creb;
 #X connect 0 0 18 0;
 #X connect 0 0 25 0;
 #X connect 0 0 26 0;

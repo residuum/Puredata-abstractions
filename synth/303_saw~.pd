@@ -1,4 +1,6 @@
-#N canvas 450 99 352 665 10;
+#N canvas 448 99 352 665 10;
+#X declare -lib zexy;
+#X declare -lib bsaylor -lib creb;
 #X obj -69 68 mtof;
 #X obj -69 107 phasor~;
 #X obj 148 279 / 127;
@@ -32,6 +34,7 @@
 #X obj -41 450 svf~ low;
 #X obj 108 348 eadsr~ 0 20 0.9 10;
 #X obj -37 592 ../fx/normalize~;
+#X obj 77 630 import bsaylor creb;
 #X connect 0 0 1 0;
 #X connect 1 0 30 0;
 #X connect 2 0 6 0;

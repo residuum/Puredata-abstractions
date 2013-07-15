@@ -1,9 +1,9 @@
-#N canvas 707 51 471 627 10;
+#N canvas 705 51 471 627 10;
 #X obj 31 174 sample-looper~;
 #X obj 30 472 *~ 1;
 #X obj 41 353 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
 -1 -1 6350 1;
-#X msg 183 423 1;
+#X msg 181 423 1;
 #X obj 181 353 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
 -1;
 #X obj 31 93 inlet;

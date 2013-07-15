@@ -1,12 +1,12 @@
-#N canvas 0 0 450 300 10;
-#X obj 59 59 inlet;
-#X obj 64 246 outlet;
-#X obj 59 85 t b b b;
-#X obj 66 209 spigot;
-#X obj 101 178 tgl 15 1 empty empty empty 0 -6 0 10 -262144 -1 -1 1
+#N canvas 44 51 450 300 10;
+#X obj 55 59 inlet;
+#X obj 94 264 outlet;
+#X obj 55 85 t b b b;
+#X obj 94 226 spigot;
+#X obj 127 203 tgl 15 1 empty empty empty 0 -6 0 10 -262144 -1 -1 1
 1;
-#X obj 56 121 del \$1;
-#X msg 125 132 0;
+#X obj 55 121 del \$1;
+#X msg 127 135 0;
 #X msg 55 151 1;
 #X connect 0 0 2 0;
 #X connect 2 0 5 0;

@@ -1,9 +1,9 @@
-#N canvas 500 108 372 321 10;
+#N canvas 498 133 372 321 10;
 #X obj 29 217 outlet~;
 #X obj 29 132 /~;
-#X obj 46 104 abs~;
-#X obj 29 181 *~;
-#X obj 46 156 pow~ 2;
+#X obj 45 104 abs~;
+#X obj 29 190 *~;
+#X obj 45 165 pow~ 2;
 #X obj 30 20 inlet~;
 #X obj 123 52 inlet~;
 #X text 87 20 audio in;
