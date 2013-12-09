@@ -1,4 +1,4 @@
-#N canvas 292 51 903 629 10;
+#N canvas 290 51 903 629 10;
 #X msg 368 161 0;
 #X obj 158 0 inlet~;
 #X obj 257 586 outlet~;
@@ -6,10 +6,10 @@
 #X obj 239 93 sel start stop;
 #X obj 239 71 list \$1;
 #X obj 350 364 phasor~ 0;
-#X obj 651 150 hsl 128 30 0 0 0 0 \$0-start-s \$0-start start 136 15
-0 10 -262144 -258113 -1 0 1;
-#X obj 651 183 hsl 128 30 0 0 0 0 \$0-stop-s \$0-stop stop 136 15 0
-10 -262144 -258113 -1 0 1;
+#X obj 651 150 hsl 128 30 0 19845 0 0 \$0-start-s \$0-start start 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 651 183 hsl 128 30 0 19845 0 0 \$0-stop-s \$0-stop stop 136
+15 0 10 -262144 -258113 -1 12700 1;
 #X obj 351 403 *~ 1;
 #X obj 30 519 table \$0-sample 4.41e+06;
 #X obj 259 438 +~ 0;
@@ -23,9 +23,9 @@
 #X obj 804 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
 -262144 -1 -1;
 #X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
-15 0 10 -262144 -258113 -1 0 1;
+15 0 10 -262144 -258113 -1 6350 1;
 #X obj 651 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
-15 0 10 -262144 -258113 -1 0 1;
+15 0 10 -262144 -258113 -1 6350 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 119 281 r \$0-stop-s;
@@ -36,16 +36,14 @@
 #X obj 97 59 list \$1;
 #X obj 222 172 tabwrite~ \$0-sample;
 #X obj 168 265 f;
-#X obj 168 293 * 44.1;
 #X msg 410 158 \; \$1-sample const 0;
 #X obj 410 134 \$0;
 #X obj 97 113 t b b b b;
 #X obj 97 30 inlet;
 #X obj 221 30 inlet~;
 #X obj 201 242 samplerate~;
-#X obj 201 271 / 100;
 #X obj 164 170 t s b b;
-#N canvas 374 464 450 300 counter 0;
+#N canvas 370 460 450 300 counter 0;
 #X obj 63 22 inlet;
 #X obj 115 24 inlet;
 #X obj 63 140 outlet;
@@ -62,26 +60,28 @@
 #X connect 6 0 2 0;
 #X restore 97 197 pd counter;
 #X obj 168 323 outlet;
+#X obj 201 271 / 1000;
+#X obj 168 293 * 4.41;
 #X connect 0 0 3 0;
-#X connect 0 0 13 0;
-#X connect 1 0 8 0;
+#X connect 0 0 11 0;
+#X connect 1 0 7 0;
 #X connect 1 1 0 0;
 #X connect 2 0 1 0;
-#X connect 4 0 5 0;
-#X connect 5 0 15 0;
-#X connect 7 0 6 0;
-#X connect 8 0 14 0;
-#X connect 8 1 14 1;
-#X connect 8 2 3 0;
-#X connect 8 3 7 0;
-#X connect 9 0 2 0;
-#X connect 10 0 3 0;
+#X connect 4 0 15 0;
+#X connect 6 0 5 0;
+#X connect 7 0 12 0;
+#X connect 7 1 12 1;
+#X connect 7 2 3 0;
+#X connect 7 3 6 0;
+#X connect 8 0 2 0;
+#X connect 9 0 3 0;
+#X connect 10 0 14 0;
 #X connect 11 0 12 0;
-#X connect 12 0 5 1;
-#X connect 13 0 14 0;
-#X connect 13 1 4 0;
-#X connect 13 2 11 0;
-#X connect 14 0 4 1;
+#X connect 11 1 4 0;
+#X connect 11 2 10 0;
+#X connect 12 0 4 1;
+#X connect 14 0 15 1;
+#X connect 15 0 13 0;
 #X restore 88 221 pd recording;
 #N canvas 87 111 448 424 phasor-freq-calc 0;
 #X obj 42 37 inlet;
