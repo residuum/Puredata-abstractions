@@ -1,4 +1,4 @@
-#N canvas 290 51 903 629 10;
+#N canvas 286 51 903 629 10;
 #X msg 368 161 0;
 #X obj 158 0 inlet~;
 #X obj 257 586 outlet~;
@@ -9,7 +9,7 @@
 #X obj 651 150 hsl 128 30 0 19845 0 0 \$0-start-s \$0-start start 136
 15 0 10 -262144 -258113 -1 0 1;
 #X obj 651 183 hsl 128 30 0 19845 0 0 \$0-stop-s \$0-stop stop 136
-15 0 10 -262144 -258113 -1 12700 1;
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 351 403 *~ 1;
 #X obj 30 519 table \$0-sample 4.41e+06;
 #X obj 259 438 +~ 0;
@@ -23,9 +23,9 @@
 #X obj 804 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
 -262144 -1 -1;
 #X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
-15 0 10 -262144 -258113 -1 6350 1;
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 651 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
-15 0 10 -262144 -258113 -1 6350 1;
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 119 281 r \$0-stop-s;
@@ -166,6 +166,8 @@
 #X obj 329 303 *~;
 #X obj 435 275 tabread4~ \$0-hanning;
 #X obj 234 395 +~;
+#X obj 128 -4 loadbang;
+#X obj 128 22 samplerate~;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 2 0 7 0;
@@ -192,6 +194,8 @@
 #X connect 18 0 20 1;
 #X connect 19 0 18 1;
 #X connect 20 0 4 0;
+#X connect 21 0 22 0;
+#X connect 22 0 1 1;
 #X restore 258 489 pd read-table;
 #X obj 333 463 r \$0-pitch-s;
 #X obj 257 554 *~ 0;
