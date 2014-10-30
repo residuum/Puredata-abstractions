@@ -28,7 +28,9 @@ off and velocity.
 rec_play_switch: two switches for starting recording and playing loops
 for note-vel-looper and sample-looper~
 
-symbollen: gets the length of a symbol.
+s2f: converts symbol atoms to float atoms.
+
+symbollen: gets the length of a symbol atom.
 
 shift-router: routes input to one of six outlets with another input
 for switching the outlets, useful for usage with push-buttons on an
