@@ -1,0 +1,14 @@
+#N canvas 44 51 450 300 10;
+#X obj 93 173 integral;
+#X floatatom 93 212 5 0 0 0 - - -;
+#X text 36 18 This will integrate float values from the left inlet.
+;
+#X text 37 44 The right inlet will initialize / reset the value and
+output the value.;
+#X floatatom 93 101 5 0 0 0 - - -;
+#X msg 144 125 100;
+#X msg 185 135 0;
+#X connect 0 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 0 1;

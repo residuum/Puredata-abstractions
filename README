@@ -17,6 +17,8 @@ between: outputs a random float between two pre-defined values
 bpmtoms: converts beats per minute to milliseconds for each beat,
 inverse of mstobpm.
 
+integral: integrates float values.
+
 mstobpm: converts milliseconds for a beat to beats per minute, inverse
 of bpmtoms.
 
