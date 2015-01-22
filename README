@@ -55,6 +55,8 @@ the right side and converts the timespan to frequency.
 trigger-filter: filters a stream of 0s and 1s and only outputs a value
 when a change is occuring.
 
+unwrap: wraps around values at specified lower and upper bound, e.g.
+useful for rotation data.
 
 Effects and Mixing (fx) 
 ----------------------- 

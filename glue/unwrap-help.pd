@@ -1,0 +1,19 @@
+#N canvas 915 404 532 303 10;
+#X floatatom 63 221 5 0 0 0 - - -;
+#X msg 63 78 180;
+#X floatatom 63 151 5 0 0 0 - - -;
+#X obj 63 189 unwrap -180 180;
+#X msg 194 149 bang;
+#X obj 66 118 hsl 128 15 -180 180 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 5800 1;
+#X msg 123 78 -180;
+#X text 19 35 Simulating a rotation control: Run the bar all the way
+up or down and then jump to the other side.;
+#X text 247 145 bang resets the object to start at 0;
+#X text 171 186 init the object with lower and upper bounds.;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
