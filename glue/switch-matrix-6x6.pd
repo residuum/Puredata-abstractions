@@ -103,11 +103,30 @@
 #X obj 156 450 spigot;
 #X obj 225 453 spigot;
 #X obj 297 450 spigot;
+#X obj 0 295 spigot;
+#X obj 386 35 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 421 69 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 456 105 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 491 140 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 526 175 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 561 210 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 91 333 spigot;
+#X obj 163 361 spigot;
+#X obj 231 396 spigot;
+#X obj 306 419 spigot;
+#X obj 376 470 spigot;
 #X connect 0 0 38 0;
 #X connect 0 0 39 0;
 #X connect 0 0 40 0;
 #X connect 0 0 41 0;
 #X connect 0 0 42 0;
+#X connect 0 0 73 0;
 #X connect 2 0 43 1;
 #X connect 3 0 51 1;
 #X connect 4 0 56 1;
@@ -143,6 +162,7 @@
 #X connect 32 0 45 0;
 #X connect 32 0 46 0;
 #X connect 32 0 47 0;
+#X connect 32 0 80 0;
 #X connect 38 0 33 0;
 #X connect 39 0 34 0;
 #X connect 40 0 35 0;
@@ -158,11 +178,13 @@
 #X connect 49 0 53 0;
 #X connect 49 0 54 0;
 #X connect 49 0 55 0;
+#X connect 49 0 81 0;
 #X connect 50 0 56 0;
 #X connect 50 0 57 0;
 #X connect 50 0 58 0;
 #X connect 50 0 59 0;
 #X connect 50 0 60 0;
+#X connect 50 0 82 0;
 #X connect 51 0 1 0;
 #X connect 52 0 33 0;
 #X connect 53 0 35 0;
@@ -178,11 +200,13 @@
 #X connect 61 0 65 0;
 #X connect 61 0 66 0;
 #X connect 61 0 67 0;
+#X connect 61 0 83 0;
 #X connect 62 0 68 0;
 #X connect 62 0 69 0;
 #X connect 62 0 70 0;
 #X connect 62 0 71 0;
 #X connect 62 0 72 0;
+#X connect 62 0 84 0;
 #X connect 63 0 1 0;
 #X connect 64 0 33 0;
 #X connect 65 0 34 0;
@@ -193,4 +217,16 @@
 #X connect 70 0 34 0;
 #X connect 71 0 35 0;
 #X connect 72 0 36 0;
+#X connect 73 0 1 0;
+#X connect 74 0 73 1;
+#X connect 75 0 80 1;
+#X connect 76 0 81 1;
+#X connect 77 0 82 1;
+#X connect 78 0 83 1;
+#X connect 79 0 84 1;
+#X connect 80 0 33 0;
+#X connect 81 0 34 0;
+#X connect 82 0 35 0;
+#X connect 83 0 36 0;
+#X connect 84 0 37 0;
 #X coords 0 -1 1 1 217 217 2 380 30;

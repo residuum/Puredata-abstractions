@@ -1,4 +1,5 @@
-#N canvas 637 258 450 444 10;
+#N canvas 635 256 450 444 10;
+#X declare -lib zexy;
 #X obj 79 29 inlet;
 #X obj 79 87 phasor~;
 #X obj 268 140 <~ 0.5;
@@ -13,6 +14,7 @@
 #X obj 162 358 outlet~;
 #X obj 340 30 inlet;
 #X obj 79 58 \$1;
+#X obj 342 345 import zexy;
 #X connect 0 0 13 0;
 #X connect 1 0 3 0;
 #X connect 1 0 2 0;
