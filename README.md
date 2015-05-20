@@ -93,9 +93,11 @@ with adjustable start and stop, can be synchronized with other instances
 of itself and `[sample-looper~]` instances.
 
 `[sample-looper~]`, `[sample-looper-box~]`: records and plays back audio loops
-with adjustable start, stop and playback speed, can be synchronized with
+with adjustable start, stop, playback speed and pitch, can be synchronized with
 other instances of itself and `[note-vel-looper]` instances.
 
 `[live-sampler~]`: records a sample and play it back as loops with MIDI notes.
 Pitch of recorded loop is set to note 60, contains ADSR envelope, modulation
 of playback pitch.
+
+`[breakbeat~]`: loads a stereo sample of 8 beats length, slices it and plays it back as a breakbeat with adjustable playback speed and pitch. 
