@@ -1,0 +1,41 @@
+#N canvas 46 58 1199 707 10;
+#X obj 355 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 101 101 loopers/note-vel-looper-box;
+#X obj 104 327 glue/rec_play_switch;
+#X obj 101 373 live-sampler~;
+#X obj 97 616 outlet~;
+#X obj 109 58 inlet;
+#X obj 421 60 inlet;
+#X obj 243 59 inlet;
+#X obj 374 60 inlet;
+#X obj 300 60 inlet;
+#X obj 154 58 inlet;
+#X obj 338 539 outlet;
+#X obj 194 58 inlet~;
+#X obj 99 583 *~ 1;
+#X obj 120 506 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
+-1 -1 6350 1;
+#X msg 260 576 1;
+#X obj 260 506 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
+-1;
+#X obj 337 58 inlet;
+#X connect 1 0 0 0;
+#X connect 1 0 3 2;
+#X connect 1 1 3 3;
+#X connect 1 2 11 0;
+#X connect 2 0 3 0;
+#X connect 3 0 13 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 5;
+#X connect 7 0 1 2;
+#X connect 8 0 1 4;
+#X connect 9 0 1 3;
+#X connect 10 0 1 1;
+#X connect 12 0 3 1;
+#X connect 13 0 4 0;
+#X connect 14 0 13 1;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 2 0;
+#X coords 0 -1 1 1 206 440 2 100 100;

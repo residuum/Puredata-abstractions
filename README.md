@@ -79,6 +79,8 @@ useful for rotation data.
 Pitch of recorded loop is set to note 60, contains ADSR envelope, modulation
 of playback pitch.
 
+`[live-sampler-box~]`:  a combination of `[live-sampler~]` and `[sample-looper-box]` 
+
 `[note-vel-looper]`, `[note-vel-looper-box]`: records and plays back MIDI loops
 with adjustable start and stop, can be synchronized with other instances
 of itself and `[sample-looper~]` instances.
@@ -86,6 +88,7 @@ of itself and `[sample-looper~]` instances.
 `[sample-looper~]`, `[sample-looper-box~]`: records and plays back audio loops
 with adjustable start, stop, playback speed and pitch, can be synchronized with
 other instances of itself and `[note-vel-looper]` instances.
+
 
 ## Sound synthesis (synth)
 `[303-saw~]`: a sawtooth oscillator and envelope following low pass filter
