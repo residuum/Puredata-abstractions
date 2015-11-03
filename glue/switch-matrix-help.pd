@@ -1,0 +1,10 @@
+#N canvas 46 63 775 479 10;
+#X text 294 138 Routes messages from up to 6 inlets to up to 6 outlets
+according to switches with values =1. Lines correspond to outlets \,
+rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
+from inlet 5 to outlet 3;
+#X obj 489 255 switch-matrix 3;
+#X obj 314 354 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 261 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
