@@ -4,7 +4,22 @@ according to switches with values =1. Lines correspond to outlets \,
 rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
 from inlet 5 to outlet 3;
 #X obj 489 255 switch-matrix 3;
-#X obj 314 354 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 205 243 switch-matrix 2;
+#X obj 473 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 261 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 483 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 493 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 473 385 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 483 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 493 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;
