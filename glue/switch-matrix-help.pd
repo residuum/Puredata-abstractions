@@ -1,10 +1,5 @@
-#N canvas 46 63 775 479 10;
-#X text 294 138 Routes messages from up to 6 inlets to up to 6 outlets
-according to switches with values =1. Lines correspond to outlets \,
-rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
-from inlet 5 to outlet 3;
+#N canvas 46 78 775 479 10;
 #X obj 489 255 switch-matrix 3;
-#X obj 205 243 switch-matrix 2;
 #X obj 473 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 483 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -17,9 +12,17 @@ from inlet 5 to outlet 3;
 -1 -1;
 #X obj 493 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X connect 1 0 6 0;
-#X connect 1 1 7 0;
-#X connect 1 2 8 0;
-#X connect 3 0 1 0;
-#X connect 4 0 1 1;
-#X connect 5 0 1 2;
+#X obj 37 299 switch-matrix;
+#X obj 57 168 switch-matrix 2;
+#X obj 633 208 switch-matrix 15;
+#X text 36 63 Routes messages from up to 6 inlets to up to 6 outlets
+according to switches with values =1. Lines correspond to outlets \,
+rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
+from inlet 5 to outlet 3 Initialize with the number of in-/outlets
+\, default is 4 \, can be initialized with up to 15 in-/outlets.;
+#X connect 0 0 4 0;
+#X connect 0 1 5 0;
+#X connect 0 2 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 2;
