@@ -53,10 +53,10 @@ arduino etc.
 `[switch-bang]`: outputs bang alternatively on two outlets when receiving
 a bang.
 
-`[switch-matrix-6x6]`: routes 6 inlets to 6 outlets. Rows correspond to
-outlets, columns to inlets, so the toggle in row 1 column 2 routes the
-input from inlet 2 to outlet 1, e.g. useful for toggling synchronization
-of `[sample-looper~]` instances.
+`[switch-matrix]`: routes inlets to outlets. Rows correspond to outlets, 
+columns to inlets, so the toggle in row 1 column 2 routes the input from inlet 2 
+to outlet 1, e.g. useful for toggling synchronization of `[sample-looper~]` instances.
+Can be initialized with the number of inlets and outlets with up to 15, defaults to 4.
 
 `[switch-spigot]`: outputs 1 and 0 alternatively on the two outlets, useful
 for switching two spigot objects.
@@ -73,7 +73,8 @@ when a change is occuring.
 useful for rotation data.
 
 ## Looper objects (loopers)
-`[breakbeat~]`: loads a stereo sample of 8 beats length, slices it and plays it back as a breakbeat with adjustable playback speed and pitch. 
+`[breakbeat~]`: loads a stereo sample of 8 beats length, slices it and plays 
+it back as a breakbeat with adjustable playback speed and pitch. 
 
 `[live-sampler~]`: records a sample and play it back as loops with MIDI notes.
 Pitch of recorded loop is set to note 60, contains ADSR envelope, modulation
