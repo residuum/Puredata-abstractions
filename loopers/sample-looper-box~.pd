@@ -1,10 +1,10 @@
-#N canvas 699 51 471 627 10;
+#N canvas 699 63 471 627 10;
 #X obj 31 174 sample-looper~;
 #X obj 30 472 *~ 1;
-#X obj 41 353 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
+#X obj 39 353 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
 -1 -1 6350 1;
 #X msg 181 423 1;
-#X obj 181 353 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
+#X obj 171 353 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
 -1;
 #X obj 31 93 inlet;
 #X obj 100 93 inlet;
@@ -24,4 +24,4 @@
 #X connect 7 0 0 2;
 #X connect 8 0 0 1;
 #X connect 11 0 0 0;
-#X coords 0 -1 1 1 205 272 2 28 125;
+#X coords 0 -1 1 1 193 272 2 30 125;

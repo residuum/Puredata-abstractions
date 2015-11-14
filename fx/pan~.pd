@@ -1,4 +1,4 @@
-#N canvas 46 58 450 623 10;
+#N canvas 46 63 450 623 10;
 #X obj 82 95 inlet~;
 #X obj 81 396 outlet~;
 #X obj 169 397 outlet~;
@@ -17,7 +17,7 @@
 #X obj 114 339 sin;
 #X obj 201 282 *;
 #X obj 201 305 sin;
-#X obj 349 194 bng 30 250 50 0 empty empty rst 34 16 0 10 -262144 -1
+#X obj 337 195 bng 30 250 50 0 empty empty rst 34 16 0 10 -262144 -1
 -1;
 #X obj 277 477 import cyclone;
 #X obj 158 233 cyclone/acos;
@@ -42,4 +42,4 @@
 #X connect 17 0 10 0;
 #X connect 19 0 13 1;
 #X connect 19 0 15 1;
-#X coords 0 -1 1 1 205 47 1 198 180;
+#X coords 0 -1 1 1 193 47 1 198 180;

@@ -1,4 +1,4 @@
-#N canvas 543 212 428 532 10;
+#N canvas 543 217 428 532 10;
 #X obj 31 93 inlet;
 #X obj 343 95 inlet;
 #X obj 224 459 outlet;
@@ -20,4 +20,4 @@
 #X connect 8 0 5 2;
 #X connect 9 0 10 1;
 #X connect 10 0 5 0;
-#X coords 0 -1 1 1 205 272 2 28 125;
+#X coords 0 -1 1 1 193 272 2 29 125;

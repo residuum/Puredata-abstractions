@@ -1,4 +1,4 @@
-#N canvas 286 51 903 629 10;
+#N canvas 286 58 903 629 10;
 #X msg 368 161 0;
 #X obj 158 0 inlet~;
 #X obj 257 586 outlet~;
@@ -6,12 +6,12 @@
 #X obj 239 93 sel start stop;
 #X obj 239 71 list \$1;
 #X obj 350 364 phasor~ 0;
-#X obj 651 150 hsl 128 30 0 124891 0 0 \$0-start-s \$0-start start
+#X obj 646 150 hsl 128 30 0 124891 0 0 \$0-start-s \$0-start start
 136 15 0 10 -262144 -258113 -1 0 1;
-#X obj 651 183 hsl 128 30 0 124891 0 0 \$0-stop-s \$0-stop stop 136
-15 0 10 -262144 -258113 -1 12700 1;
+#X obj 646 183 hsl 128 30 0 124891 0 0 \$0-stop-s \$0-stop stop 136
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 351 403 *~ 1;
-#X obj 30 519 table \$0-sample 4.41e+006;
+#X obj 30 519 table \$0-sample 4.41e+06;
 #X obj 259 438 +~ 0;
 #X text 298 439 offset;
 #X obj 290 281 t b f;
@@ -20,17 +20,17 @@
 #X obj 632 4 inlet;
 #X obj 443 392 fexpr~ $x[0] < $x[-1];
 #X obj 443 432 threshold~ 0.5 1 0.1 1;
-#X obj 804 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
+#X obj 779 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
 -262144 -1 -1;
-#X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
-15 0 10 -262144 -258113 -1 6350 1;
-#X obj 651 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
-15 0 10 -262144 -258113 -1 6350 1;
+#X obj 646 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 646 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
+15 0 10 -262144 -258113 -1 0 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 119 281 r \$0-stop-s;
 #X obj 459 198 r \$0-speed-s;
-#N canvas 254 89 717 606 recording 1;
+#N canvas 254 89 717 606 recording 0;
 #X msg 164 110 stop;
 #X obj 97 80 sel start stop;
 #X obj 97 59 list \$1;
@@ -202,7 +202,7 @@
 #X obj 239 120 t b b b b;
 #X msg 278 523 1;
 #X msg 320 523 0;
-#X obj 651 281 hsl 128 15 0 1 0 0 empty \$0-pos position 136 7 0 10
+#X obj 646 281 hsl 128 15 0 1 0 0 empty \$0-pos position 136 7 0 10
 -228856 -1 -1 0 1;
 #X obj 168 472 s \$0-pos;
 #X obj 168 442 snapshot~;
@@ -297,4 +297,4 @@
 #X connect 51 1 52 0;
 #X connect 52 0 53 1;
 #X connect 53 0 49 0;
-#X coords 0 -1 1 1 200 175 1 640 125;
+#X coords 0 -1 1 1 191 175 1 640 125;

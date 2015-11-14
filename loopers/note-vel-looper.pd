@@ -1,4 +1,4 @@
-#N canvas 411 51 892 713 10;
+#N canvas 411 58 892 707 10;
 #X obj 16 34 route rec play;
 #X obj 16 3 inlet;
 #X obj 16 76 sel start stop;
@@ -11,15 +11,15 @@
 15 0 10 -262144 -258113 -1 8467 1;
 #X obj 837 513 outlet;
 #X obj 714 6 inlet;
-#X obj 821 108 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
+#X obj 801 108 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
 -262144 -1 -1;
 #X obj 189 5 inlet;
 #X obj 667 119 tgl 32 0 \$0-record-s \$0-record empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 714 49 s \$0-reset;
 #X obj 483 195 r \$0-reset-s;
 #X obj 670 188 hsl 128 30 0 527 0 0 \$0-stop-s \$0-stop stop 136 15
-0 10 -262144 -258113 -1 12700 1;
+0 10 -262144 -258113 -1 0 1;
 #X obj 189 122 spigot;
 #X obj 222 88 r \$0-record-s;
 #X obj 421 583 outlet;
@@ -111,7 +111,7 @@
 #X restore 17 428 pd record;
 #X obj 630 49 s \$0-record;
 #X obj 670 257 hsl 128 15 0 527 0 0 empty \$0-pos-s position 136 7
-0 10 -228856 -1 -1 482 1;
+0 10 -228856 -1 -1 0 1;
 #X obj 528 308 s \$0-pos-s;
 #X obj 367 99 t b b;
 #X obj 630 26 ../glue/bangonce 400;
@@ -173,4 +173,4 @@
 #X connect 51 1 41 0;
 #X connect 52 0 48 0;
 #X connect 52 1 50 0;
-#X coords 0 -1 1 1 200 175 1 660 100;
+#X coords 0 -1 1 1 191 175 1 663 100;
