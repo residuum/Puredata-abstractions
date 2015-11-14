@@ -14,10 +14,10 @@
 #X obj 338 539 outlet;
 #X obj 194 58 inlet~;
 #X obj 99 583 *~ 1;
-#X obj 120 506 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
+#X obj 112 502 hsl 128 30 0 2 0 1 empty empty volume 12 38 0 10 -262144
 -1 -1 6350 1;
 #X msg 260 576 1;
-#X obj 260 506 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
+#X obj 244 502 bng 30 250 50 0 empty empty rst 33 15 0 10 -262144 -1
 -1;
 #X obj 337 58 inlet;
 #X connect 1 0 0 0;
@@ -38,4 +38,4 @@
 #X connect 15 0 14 0;
 #X connect 16 0 15 0;
 #X connect 17 0 2 0;
-#X coords 0 -1 1 1 206 440 2 100 100;
+#X coords 0 -1 1 1 193 445 2 101 100;
