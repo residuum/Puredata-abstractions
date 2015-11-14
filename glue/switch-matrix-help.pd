@@ -1,25 +1,38 @@
-#N canvas 46 88 1185 755 10;
-#X obj 489 255 switch-matrix 3;
-#X obj 489 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 46 98 1185 755 10;
+#X obj 109 465 switch-matrix 3;
+#X obj 109 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 543 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 163 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 597 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 217 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 489 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 109 600 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 543 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 163 600 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 597 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 217 599 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 37 299 switch-matrix;
-#X obj 57 168 switch-matrix 2;
-#X obj 633 208 switch-matrix 15;
-#X text 36 63 Routes messages from up to 6 inlets to up to 6 outlets
+#X obj 36 189 switch-matrix;
+#X obj 37 419 switch-matrix 2;
+#X obj 253 418 switch-matrix 15;
+#X text 35 140 Creating [switch-matrix] without parameters creates
+an object with 4 inlets and outlets;
+#X text 36 62 Routes messages from up to 6 inlets to up to 6 outlets
 according to switches with values =1. Lines correspond to outlets \,
 rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
-from inlet 5 to outlet 3 Initialize with the number of in-/outlets
-\, default is 4 \, can be initialized with up to 15 in-/outlets.;
+from inlet 5 to outlet 3;
+#X text 36 328 Creating with one numeric parameter with create an object
+with the defined number of inlets \, outlets and subsequently rows
+and columns of toggles. Maximum is 15 These examples were created using
+[switch-matrix 2] [switch-matrix 4] and [switch-matrix 15];
+#X text 631 60 Creating the object with two numeric parameters \, the
+first parameter defines the number of inlets \, outlets \, rows and
+columns \, and the second parameter the size of the toggles. These
+examples were created using [switch-matrix 4 20] [switch-matrix 3 40]
+and [switch-matrix 2 80];
+#X obj 629 138 switch-matrix 4 20;
+#X obj 759 139 switch-matrix 3 40;
+#X obj 911 141 switch-matrix 2 80;
 #X connect 0 0 4 0;
 #X connect 0 1 5 0;
 #X connect 0 2 6 0;
