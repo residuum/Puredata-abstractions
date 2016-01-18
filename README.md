@@ -92,12 +92,6 @@ other instances of itself and `[note-vel-looper]` instances.
 
 
 ## Sound synthesis (synth)
-`[303-saw~]`: a sawtooth oscillator and envelope following low pass filter
-for acid sounds, but unfortunately not really similar to 303.
-
-`[hoover~]`, `[hoover2~]`, `[hoover3~]`, `[hoover-phasor~]`: simple bass synth objects
-for Dubstep basslines.
-
 `[pulsewidth~]`: pulse oscillator with pulsewidth modulation.
 
 `[squarewave~]`: squarewave oscillator.
