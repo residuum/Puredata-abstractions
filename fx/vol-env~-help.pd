@@ -1,0 +1,19 @@
+#N canvas 223 210 741 382 10;
+#X obj 31 191 vol-env~;
+#X obj 31 126 osc~ 440;
+#X obj 32 158 *~ 0.1;
+#X obj 31 291 dac~ 1 2;
+#X text 29 88 The toggle on the left will enable or bypass the envelope.
+;
+#X text 27 23 [vol-env~] is a 16 step volume envelope with bypass.
+On instanciation a random pattern is generated \, pressing the bang
+in the middle will generate a new random pattern. You are able to change
+the pattern by editing the visible array.;
+#X obj 217 141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 258 137 On startup each step is 100 ms long. By;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 6 0 0 1;
