@@ -1,12 +1,10 @@
-#N canvas 44 78 311 220 10;
-#X declare -lib zexy;
+#N canvas 768 362 323 216 10;
 #X obj -17 39 hip~ 5;
 #X obj -16 89 z~ 64;
 #X obj -16 129 *~;
 #X obj 28 89 limiter~ 50;
 #X obj -16 6 inlet~;
 #X obj -16 171 outlet~;
-#X obj 175 20 import zexy;
 #X connect 0 0 3 0;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;

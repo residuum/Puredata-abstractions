@@ -271,7 +271,7 @@
 #X msg 355 76 15;
 #X obj 355 100 -;
 #X msg 167 149 \; \$1 dirty 0 \, menuclose 1;
-#X obj 136 259 canvasdelete;
+#X obj 136 259 iemguts/canvasdelete;
 #X obj 335 37 t b b f f;
 #X obj 355 172 pack f s;
 #X obj 400 99 * 2;
