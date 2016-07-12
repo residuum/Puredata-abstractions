@@ -17,10 +17,6 @@
 #X obj 253 418 switch-matrix 15;
 #X text 35 140 Creating [switch-matrix] without parameters creates
 an object with 4 inlets and outlets;
-#X text 36 62 Routes messages from up to 6 inlets to up to 6 outlets
-according to switches with values =1. Lines correspond to outlets \,
-rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
-from inlet 5 to outlet 3;
 #X text 36 328 Creating with one numeric parameter with create an object
 with the defined number of inlets \, outlets and subsequently rows
 and columns of toggles. Maximum is 15 These examples were created using
@@ -33,6 +29,10 @@ and [switch-matrix 2 80];
 #X obj 629 138 switch-matrix 4 20;
 #X obj 759 139 switch-matrix 3 40;
 #X obj 911 141 switch-matrix 2 80;
+#X text 36 62 Routes messages from up to 15 inlets to up to 15 outlets
+according to switches with values =1. Lines correspond to outlets \,
+rows to inlets \, e.g. the switch in line 3 \, row 5 routes the messages
+from inlet 5 to outlet 3;
 #X connect 0 0 4 0;
 #X connect 0 1 5 0;
 #X connect 0 2 6 0;

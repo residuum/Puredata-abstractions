@@ -98,8 +98,6 @@ with adjustable start, stop, playback speed and pitch, can be synchronized with
 other instances of itself and `[note-vel-looper]` instances.
 
 ## Sound synthesis (synth)
-`[pulsewidth~]`: pulse oscillator with pulsewidth modulation.
-
-`[squarewave~]`: squarewave oscillator.
+`[pulsewidth~]`: rectangle oscillator with pulsewidth modulation.
 
 `[triangle~]`: Triangle wave oscillator.
