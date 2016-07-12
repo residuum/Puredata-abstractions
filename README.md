@@ -4,6 +4,13 @@ This is a collection of abstractions that I have made for Puredata. I use
 the Pd convention for adding a trailing tilde (~) to all objects, that
 output or process audio. A lot of objects have accompaning help patches.
 
+For all abstractions to load without any error you need the following
+libraries, available via deken:
+- iemguts
+- cyclone
+- list-abs
+- zexy
+
 ## Effects and Mixing (fx)
 `[bitcrusher~]`: simple bitcrusher effect.
 
@@ -89,7 +96,6 @@ of itself and `[sample-looper~]` instances.
 `[sample-looper~]`, `[sample-looper-box~]`: records and plays back audio loops
 with adjustable start, stop, playback speed and pitch, can be synchronized with
 other instances of itself and `[note-vel-looper]` instances.
-
 
 ## Sound synthesis (synth)
 `[pulsewidth~]`: pulse oscillator with pulsewidth modulation.
