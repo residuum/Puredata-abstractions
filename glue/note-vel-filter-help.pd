@@ -1,0 +1,9 @@
+#N canvas 44 73 540 318 10;
+#X obj 92 124 note-vel-filter;
+#X obj 92 76 notein 7;
+#X obj 94 179 print note;
+#X obj 180 187 print vel;
+#X connect 0 0 2 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;

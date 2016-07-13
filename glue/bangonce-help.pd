@@ -1,0 +1,11 @@
+#N canvas 44 63 540 318 10;
+#X text 62 20 will pause a predefined time before letting through multiple
+bangs. Useful for debouncing hardware buttons.;
+#X obj 69 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 69 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 172 167 parameter gives the time in ms.;
+#X obj 69 167 bangonce 1000;
+#X connect 1 0 4 0;
+#X connect 4 0 2 0;

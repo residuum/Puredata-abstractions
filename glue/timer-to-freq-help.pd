@@ -1,0 +1,12 @@
+#N canvas 44 68 540 318 10;
+#X obj 199 131 timer-to-freq;
+#X text 62 20 Converts the time between bangs on the left and right
+to frequency \, can be used from the input or the GUI elements;
+#X floatatom 199 204 5 0 0 0 - - -, f 5;
+#X obj 199 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 312 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;

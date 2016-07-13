@@ -1,0 +1,10 @@
+#N canvas 44 73 540 318 10;
+#X obj 103 136 print;
+#X obj 103 100 trigger-filter;
+#X msg 103 70 1;
+#X msg 148 72 0;
+#X text 105 29 Outputs values only \, if the input value is different
+from the value before.;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
