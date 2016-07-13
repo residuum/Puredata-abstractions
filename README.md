@@ -20,13 +20,8 @@ libraries, available via deken:
 
 `[pan~]`: equal volume pan for mono.
 
-`[phaser~]`: simple phaser effect, not to be confused with the built-in
-sawtooth oscillator (`[phasor~]`)
-
 `[pitchshift~]`, `[pitchshift2~]`: simple pitchshifter, each with its own
 residual effects.
-
-`[waveshaper~]`: simple waveshaper effect.
 
 ## Glue objects (glue)
 `[bangonce]`: outputs only one bang, if the inlet receives a series of

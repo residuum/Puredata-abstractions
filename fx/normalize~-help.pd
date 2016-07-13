@@ -1,0 +1,14 @@
+#N canvas 62 78 549 309 10;
+#X obj 91 185 *~ 0.1;
+#X obj 90 217 dac~ 1 2;
+#X obj 91 50 osc~ 440;
+#X obj 91 163 normalize~;
+#X text 220 163 normalizes signal to 1;
+#X obj 90 132 *~ 1;
+#X floatatom 169 64 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 1;

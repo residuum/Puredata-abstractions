@@ -1,0 +1,12 @@
+#N canvas 62 78 549 309 10;
+#X obj 31 185 *~ 0.1;
+#X obj 30 217 dac~ 1 2;
+#X obj 32 50 osc~ 440;
+#X obj 31 123 pitchshift~;
+#X floatatom 122 53 5 0 0 0 - - -, f 5;
+#X text 159 127 right inlet: shift signal in semitones.;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 1;

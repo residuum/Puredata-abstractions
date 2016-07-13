@@ -1,0 +1,16 @@
+#N canvas 62 63 450 300 10;
+#X obj 91 163 pulsewidth~ 440;
+#X obj 91 185 *~ 0.1;
+#X obj 90 217 dac~ 1 2;
+#X floatatom 91 63 5 0 0 2 frequency - -, f 5;
+#X floatatom 142 109 5 0 1 2 Pulsewidth_(0_to_1) - -, f 5;
+#X obj 193 133 bng 15 250 50 0 empty empty Reset 17 7 0 10 -262144
+-1 -1;
+#X text 216 167 1st parameter: frequency;
+#X text 216 180 2nd parameter: pulsewidth;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 2;

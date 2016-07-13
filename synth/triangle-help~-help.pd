@@ -1,0 +1,13 @@
+#N canvas 62 63 450 300 10;
+#X obj 119 205 *~ 0.1;
+#X obj 118 237 dac~ 1 2;
+#X floatatom 119 83 5 0 0 2 frequency - -, f 5;
+#X obj 207 147 bng 15 250 50 0 empty empty Reset 17 7 0 10 -262144
+-1 -1;
+#X text 244 187 1st parameter: frequency;
+#X obj 119 183 triangle~ 440;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 5 0;
+#X connect 3 0 5 1;
+#X connect 5 0 0 0;
