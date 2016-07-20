@@ -1,0 +1,34 @@
+#N canvas 44 58 950 911 10;
+#X msg 490 121 bang;
+#X text 481 101 bang for restart of playback at loop start position
+;
+#X obj 434 765 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 429 781 outputs a bang at loop end;
+#X obj 305 127 notein;
+#X obj 305 160 stripnote;
+#X obj 364 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 353 19 Enable additional recording during playback;
+#X obj 88 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 24 -4 bang to start / stop recording;
+#X obj 154 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 105 51 bang to start / stop playback;
+#X obj 238 251 live-sampler-box~;
+#X obj 257 782 dac~ 1 2;
+#X obj 218 110 osc~ 220;
+#X text 214 91 Sound to sample;
+#X connect 0 0 12 7;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 5 0 12 3;
+#X connect 5 1 12 4;
+#X connect 6 0 12 6;
+#X connect 8 0 12 0;
+#X connect 10 0 12 1;
+#X connect 12 0 13 0;
+#X connect 12 0 13 1;
+#X connect 12 1 2 0;
+#X connect 14 0 12 2;

@@ -1,11 +1,11 @@
-#N canvas 460 136 903 629 10;
+#N canvas 741 294 903 629 10;
 #X obj 158 0 inlet~;
 #X obj 257 586 outlet~;
 #X obj 88 0 inlet;
 #X obj 350 364 phasor~ 0;
-#X obj 651 150 hsl 128 30 0 121936 0 0 \$0-start-s \$0-start start
-136 15 0 10 -262144 -258113 -1 0 1;
-#X obj 651 183 hsl 128 30 0 121936 0 0 \$0-stop-s \$0-stop stop 136
+#X obj 651 150 hsl 128 30 0 58368 0 0 \$0-start-s \$0-start start 136
+15 0 10 -262144 -258113 -1 0 1;
+#X obj 651 183 hsl 128 30 0 58368 0 0 \$0-stop-s \$0-stop stop 136
 15 0 10 -262144 -258113 -1 12700 1;
 #X obj 351 403 *~ 1;
 #X obj 30 519 table \$0-sample 4.41e+06;
@@ -72,7 +72,7 @@
 #X connect 15 1 4 0;
 #X connect 15 2 10 0;
 #X restore 88 221 pd recording;
-#N canvas 83 107 448 424 phasor-freq-calc 0;
+#N canvas 83 112 448 424 phasor-freq-calc 0;
 #X obj 42 37 inlet;
 #X obj 86 36 inlet;
 #X obj 137 35 inlet;
@@ -106,7 +106,7 @@
 #X connect 14 0 3 0;
 #X connect 15 0 8 0;
 #X restore 206 330 pd phasor-freq-calc;
-#X msg 288 161 1;
+#X msg 299 164 1;
 #X obj 30 559 table \$0-hanning 256;
 #N canvas 44 51 443 256 write-hanning 0;
 #X msg 142 80 0;
@@ -130,7 +130,7 @@
 #X connect 6 0 5 0;
 #X connect 7 0 1 0;
 #X restore 29 586 pd write-hanning;
-#N canvas 44 51 526 599 read-table 0;
+#N canvas 44 58 526 599 read-table 0;
 #X obj 89 83 / 256;
 #X obj 89 56 * 44100;
 #X obj 15 30 inlet~;
@@ -182,7 +182,7 @@
 #X connect 20 0 4 0;
 #X connect 21 0 22 0;
 #X connect 22 0 1 1;
-#X restore 258 500 pd read-table;
+#X restore 258 476 pd read-table;
 #N canvas 360 325 450 300 set_length 0;
 #X obj 91 24 inlet;
 #X obj 106 142 s \$0-stop;
@@ -237,10 +237,10 @@
 #X obj 456 598 + 1;
 #X obj 407 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 653 480 osc~ 0.3;
+#X obj 780 458 osc~ 0.3;
 #X obj 636 548 / 254;
 #X obj 869 18 inlet;
-#X obj 862 77 / 12.7;
+#X obj 869 72 / 12.7;
 #X obj 521 406 bsaylor/aenv~ 30 600 0.7 800;
 #X msg 546 360 0;
 #X msg 492 172 1;

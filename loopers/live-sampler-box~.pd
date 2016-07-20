@@ -1,4 +1,4 @@
-#N canvas 46 58 1199 707 10;
+#N canvas 562 283 1199 707 10;
 #X obj 355 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 101 101 loopers/note-vel-looper-box;

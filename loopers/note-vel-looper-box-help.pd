@@ -1,12 +1,12 @@
-#N canvas 44 51 742 575 10;
+#N canvas 44 58 796 651 10;
 #X msg 404 97 bang;
 #X text 395 77 bang for restart of playback at loop start position
 ;
 #X obj 404 538 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 399 554 outputs a bang at loop end;
-#X floatatom 206 537 5 0 0 0 - - -;
-#X floatatom 305 536 5 0 0 0 - - -;
+#X floatatom 206 537 5 0 0 0 - - -, f 5;
+#X floatatom 305 536 5 0 0 0 - - -, f 5;
 #X text 202 551 note;
 #X text 302 553 velocity;
 #X obj 285 179 notein;
