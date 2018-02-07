@@ -1,4 +1,4 @@
-#N canvas 677 190 602 300 10;
+#N canvas 677 195 602 300 10;
 #X obj 34 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 213 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -19,6 +19,8 @@
 ;
 #X text 13 12 left inlet switches the radio buttons;
 #X obj 34 102 shift-router;
+#X obj 252 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;
 #X connect 10 0 2 0;
@@ -27,3 +29,4 @@
 #X connect 10 3 5 0;
 #X connect 10 4 6 0;
 #X connect 10 5 7 0;
+#X connect 10 6 11 0;

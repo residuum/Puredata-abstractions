@@ -1,34 +1,39 @@
-#N canvas 44 58 950 911 10;
+#N canvas 46 58 950 707 10;
 #X msg 490 121 bang;
 #X text 481 101 bang for restart of playback at loop start position
 ;
 #X obj 434 765 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 429 781 outputs a bang at loop end;
-#X obj 305 127 notein;
-#X obj 305 160 stripnote;
-#X obj 364 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 437 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 353 19 Enable additional recording during playback;
+#X text 426 52 Enable additional recording during playback;
 #X obj 88 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 24 -4 bang to start / stop recording;
 #X obj 154 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 105 51 bang to start / stop playback;
-#X obj 238 251 live-sampler-box~;
 #X obj 257 782 dac~ 1 2;
 #X obj 218 110 osc~ 220;
 #X text 214 91 Sound to sample;
-#X connect 0 0 12 7;
-#X connect 4 0 5 0;
-#X connect 4 1 5 1;
-#X connect 5 0 12 3;
-#X connect 5 1 12 4;
-#X connect 6 0 12 6;
-#X connect 8 0 12 0;
-#X connect 10 0 12 1;
-#X connect 12 0 13 0;
-#X connect 12 0 13 1;
-#X connect 12 1 2 0;
-#X connect 14 0 12 2;
+#X obj 353 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 347 25 bang to start / stop audio recording;
+#X obj 238 251 live-sampler-box~ 1;
+#X text 454 259 creation argument sets the MIDI channel to record;
+#X text 455 274 MIDI values;
+#X text 455 299 Note on / off are looped and recorded;
+#X text 455 314 CC 10: Attack for sampler (*5 in ms);
+#X text 455 329 CC 11: Decay for sampler (*5 in ms);
+#X text 455 344 CC 12: Sustain for sampler (/127);
+#X text 455 359 CC 13: Release for sampler (*10 in ms);
+#X connect 0 0 15 5;
+#X connect 4 0 15 4;
+#X connect 6 0 15 0;
+#X connect 8 0 15 1;
+#X connect 11 0 15 2;
+#X connect 13 0 15 3;
+#X connect 15 0 10 0;
+#X connect 15 0 10 1;
+#X connect 15 1 2 0;

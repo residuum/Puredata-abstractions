@@ -1,14 +1,14 @@
-#N canvas 44 58 796 651 10;
+#N canvas 473 128 742 638 10;
 #X msg 404 97 bang;
 #X text 395 77 bang for restart of playback at loop start position
 ;
 #X obj 404 538 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 399 554 outputs a bang at loop end;
-#X floatatom 206 537 5 0 0 0 - - -, f 5;
-#X floatatom 305 536 5 0 0 0 - - -, f 5;
-#X text 202 551 note;
-#X text 302 553 velocity;
+#X floatatom 206 577 5 0 0 0 - - -, f 5;
+#X floatatom 273 576 5 0 0 0 - - -, f 5;
+#X text 202 591 note;
+#X text 270 593 velocity;
 #X obj 285 179 notein;
 #X obj 285 212 stripnote;
 #X obj 364 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -21,14 +21,16 @@
 #X obj 224 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 175 83 bang to start / stop playback;
+#X obj 206 522 unpack f f;
 #X connect 0 0 12 5;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 9 0 12 2;
 #X connect 9 1 12 3;
 #X connect 10 0 12 4;
-#X connect 12 0 4 0;
-#X connect 12 1 5 0;
-#X connect 12 2 2 0;
+#X connect 12 0 17 0;
+#X connect 12 1 2 0;
 #X connect 13 0 12 0;
 #X connect 15 0 12 1;
+#X connect 17 0 4 0;
+#X connect 17 1 5 0;

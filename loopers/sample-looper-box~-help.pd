@@ -1,4 +1,4 @@
-#N canvas 389 51 785 648 10;
+#N canvas 389 58 785 648 10;
 #X obj 79 171 sample-looper-box~;
 #X obj 79 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -21,9 +21,12 @@
 #X obj 11 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 6 69 load a sample;
+#X floatatom 167 513 5 0 0 0 - - -, f 5;
+#X text 163 532 outputs recorded length;
 #X connect 0 0 10 0;
 #X connect 0 0 10 1;
-#X connect 0 1 11 0;
+#X connect 0 1 17 0;
+#X connect 0 2 11 0;
 #X connect 1 0 0 0;
 #X connect 3 0 0 1;
 #X connect 5 0 0 2;
