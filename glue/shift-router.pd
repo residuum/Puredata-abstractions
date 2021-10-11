@@ -1,8 +1,8 @@
-#N canvas 492 106 649 540 10;
+#N canvas 459 106 649 540 10;
 #X obj -6 -6 inlet;
 #X obj -13 525 outlet;
 #X obj -7 123 hradio 30 1 0 10 empty empty empty 0 -8 0 5 -262144 -1
--1 9;
+-1 7;
 #X obj 319 4 inlet;
 #X obj -13 482 spigot;
 #X obj 20 455 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -27,7 +27,7 @@
 #X obj 245 482 spigot;
 #X obj 278 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 30 28 + 1;
+#X obj 40 31 + 1;
 #X msg 61 63 0;
 #X obj -6 29 1;
 #X obj 311 526 outlet;
@@ -36,7 +36,7 @@
 1;
 #X obj 383 525 outlet;
 #X obj 383 482 spigot;
-#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 443 525 outlet;
 #X obj 443 482 spigot;
@@ -44,7 +44,7 @@
 1;
 #X obj 503 525 outlet;
 #X obj 503 482 spigot;
-#X obj 536 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 536 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -3 238 expr if($f1==0 \, 1 \, 0) \; if($f1==1 \, 1 \, 0) \;
 if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
@@ -53,6 +53,7 @@ if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
 #X obj -5 62 moses 10;
 #X connect 0 0 23 0;
 #X connect 2 0 36 0;
+#X connect 2 0 21 0;
 #X connect 3 0 4 0;
 #X connect 3 0 7 0;
 #X connect 3 0 10 0;
@@ -77,7 +78,6 @@ if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
 #X connect 20 0 19 1;
 #X connect 21 0 23 1;
 #X connect 22 0 23 0;
-#X connect 23 0 21 0;
 #X connect 23 0 37 0;
 #X connect 25 0 24 0;
 #X connect 26 0 25 1;

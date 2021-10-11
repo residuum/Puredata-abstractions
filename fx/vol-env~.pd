@@ -1,10 +1,10 @@
-#N canvas 46 138 778 554 10;
+#N canvas 36 138 778 554 10;
 #X obj 76 49 inlet~;
 #X obj 76 313 outlet~;
 #X obj 421 50 inlet;
 #X obj 247 82 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 203 82 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 203 82 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 77 271 *~ 1;
 #X obj 206 231 *~ 0;
@@ -39,7 +39,7 @@
 #X connect 8 1 9 0;
 #X connect 9 0 6 1;
 #X restore 247 129 pd write;
-#N canvas 46 83 738 559 synchronize 0;
+#N canvas 36 83 738 559 synchronize 0;
 #X obj 80 40 inlet;
 #X obj 111 252 outlet;
 #X obj 129 65 metro 1;
@@ -95,9 +95,9 @@
 #X obj 421 231 line 0 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-store 16 float 3;
-#A 0 0.559055 0.590551 0.80315 0.984252 0.307087 0.645669 0.96063 0.574803
-0.559055 0.0866142 0.165354 0.685039 0.362205 0.574803 0.88189 0.291339
-;
+#A 0 0.023622 0.440945 0.0866142 0.511811 0.00787402 0.787402 0.102362
+0.582677 0.566929 0.669291 0.669291 0.976378 0.834646 0.874016 0.0393701
+0.685039;
 #X coords 0 1 16 0 100 50 2 0 0;
 #X restore 288 71 graph;
 #X connect 0 0 5 0;
