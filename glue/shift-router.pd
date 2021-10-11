@@ -1,52 +1,68 @@
-#N canvas 492 106 426 496 10;
+#N canvas 492 106 649 540 10;
 #X obj -6 -6 inlet;
-#X obj -13 385 outlet;
-#X obj -5 123 hradio 30 1 0 7 empty empty empty 0 -8 0 5 -262144 -1
--1 0;
+#X obj -13 525 outlet;
+#X obj -7 123 hradio 30 1 0 10 empty empty empty 0 -8 0 5 -262144 -1
+-1 9;
 #X obj 319 4 inlet;
-#X obj -13 342 spigot;
-#X obj 20 315 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -13 482 spigot;
+#X obj 20 455 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 43 384 outlet;
-#X obj 43 341 spigot;
-#X obj 76 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 43 524 outlet;
+#X obj 43 481 spigot;
+#X obj 76 454 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 94 385 outlet;
-#X obj 94 342 spigot;
-#X obj 127 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 94 525 outlet;
+#X obj 94 482 spigot;
+#X obj 127 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 142 385 outlet;
-#X obj 142 342 spigot;
-#X obj 175 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 142 525 outlet;
+#X obj 142 482 spigot;
+#X obj 175 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 194 386 outlet;
-#X obj 194 343 spigot;
-#X obj 227 316 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 194 526 outlet;
+#X obj 194 483 spigot;
+#X obj 227 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 245 385 outlet;
-#X obj 245 342 spigot;
-#X obj 278 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 245 525 outlet;
+#X obj 245 482 spigot;
+#X obj 278 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 30 28 + 1;
 #X msg 61 63 0;
 #X obj -6 29 1;
-#X obj -5 62 moses 7;
-#X obj -6 178 expr if($f1==0 \, 1 \, 0) \; if($f1==1 \, 1 \, 0) \;
-if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
-\; if($f1==5 \, 1 \, 0) \; if($f1==6 \, 1 \, 0);
-#X obj 311 386 outlet;
-#X obj 311 343 spigot;
-#X obj 344 316 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 311 526 outlet;
+#X obj 311 483 spigot;
+#X obj 344 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 383 525 outlet;
+#X obj 383 482 spigot;
+#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 443 525 outlet;
+#X obj 443 482 spigot;
+#X obj 476 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 503 525 outlet;
+#X obj 503 482 spigot;
+#X obj 536 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -3 238 expr if($f1==0 \, 1 \, 0) \; if($f1==1 \, 1 \, 0) \;
+if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
+\; if($f1==5 \, 1 \, 0) \; if($f1==6 \, 1 \, 0) \; if($f1==7 \, 1 \,
+0) \; if($f1==8 \, 1 \, 0) \; if($f1==9 \, 1 \, 0) \;, f 97;
+#X obj -5 62 moses 10;
 #X connect 0 0 23 0;
-#X connect 2 0 25 0;
+#X connect 2 0 36 0;
 #X connect 3 0 4 0;
 #X connect 3 0 7 0;
 #X connect 3 0 10 0;
 #X connect 3 0 13 0;
 #X connect 3 0 16 0;
 #X connect 3 0 19 0;
-#X connect 3 0 27 0;
+#X connect 3 0 25 0;
+#X connect 3 0 28 0;
+#X connect 3 0 31 0;
+#X connect 3 0 34 0;
 #X connect 4 0 1 0;
 #X connect 5 0 4 1;
 #X connect 7 0 6 0;
@@ -62,16 +78,25 @@ if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
 #X connect 21 0 23 1;
 #X connect 22 0 23 0;
 #X connect 23 0 21 0;
-#X connect 23 0 24 0;
-#X connect 24 0 2 0;
-#X connect 24 1 22 0;
-#X connect 25 0 5 0;
-#X connect 25 1 8 0;
-#X connect 25 2 11 0;
-#X connect 25 3 14 0;
-#X connect 25 4 17 0;
-#X connect 25 5 20 0;
-#X connect 25 6 28 0;
-#X connect 27 0 26 0;
-#X connect 28 0 27 1;
-#X coords 0 -1 1 1 215 35 2 -8 120;
+#X connect 23 0 37 0;
+#X connect 25 0 24 0;
+#X connect 26 0 25 1;
+#X connect 28 0 27 0;
+#X connect 29 0 28 1;
+#X connect 31 0 30 0;
+#X connect 32 0 31 1;
+#X connect 34 0 33 0;
+#X connect 35 0 34 1;
+#X connect 36 0 5 0;
+#X connect 36 1 8 0;
+#X connect 36 2 11 0;
+#X connect 36 3 14 0;
+#X connect 36 4 17 0;
+#X connect 36 5 20 0;
+#X connect 36 6 26 0;
+#X connect 36 7 29 0;
+#X connect 36 8 32 0;
+#X connect 36 9 35 0;
+#X connect 37 0 2 0;
+#X connect 37 1 22 0;
+#X coords 0 -1 1 1 302 35 2 -8 120;
