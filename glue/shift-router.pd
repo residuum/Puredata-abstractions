@@ -1,11 +1,11 @@
-#N canvas 459 106 649 540 10;
+#N canvas 448 106 649 540 10;
 #X obj -6 -6 inlet;
 #X obj -13 525 outlet;
 #X obj -7 123 hradio 30 1 0 10 empty empty empty 0 -8 0 5 -262144 -1
--1 7;
+-1 0;
 #X obj 319 4 inlet;
 #X obj -13 482 spigot;
-#X obj 20 455 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 20 455 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 43 524 outlet;
 #X obj 43 481 spigot;
@@ -36,7 +36,7 @@
 1;
 #X obj 383 525 outlet;
 #X obj 383 482 spigot;
-#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 443 525 outlet;
 #X obj 443 482 spigot;
