@@ -1,4 +1,5 @@
 #N canvas 579 269 450 419 10;
+#X declare -stdlib zexy;
 #X obj 45 30 inlet;
 #X obj 84 30 inlet;
 #X obj 45 297 random;
@@ -11,9 +12,10 @@
 #X obj 270 173 * 2099;
 #X obj 213 219 +;
 #X obj 213 190 * 6217;
-#X obj 274 110 time ------;
 #X obj 191 63 t b b;
 #X obj 191 35 loadbang;
+#X obj 243 361 declare -stdlib zexy;
+#X obj 274 110 time -------;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
 #X connect 2 0 3 0;
@@ -25,10 +27,10 @@
 #X connect 9 0 8 0;
 #X connect 10 0 4 0;
 #X connect 11 0 10 0;
-#X connect 12 0 11 0;
-#X connect 12 1 9 0;
-#X connect 12 2 6 0;
-#X connect 12 3 7 1;
-#X connect 13 0 5 0;
-#X connect 13 1 12 0;
-#X connect 14 0 13 0;
+#X connect 12 0 5 0;
+#X connect 12 1 15 0;
+#X connect 13 0 12 0;
+#X connect 15 0 11 0;
+#X connect 15 1 9 0;
+#X connect 15 2 6 0;
+#X connect 15 3 7 1;
