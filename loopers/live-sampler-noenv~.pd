@@ -2,14 +2,11 @@
 #X obj 158 0 inlet~;
 #X obj 262 586 outlet~;
 #X obj 88 0 inlet;
-#X obj 651 150 hsl 128 30 0 40131 0 0 \$0-start-s \$0-start start 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
-#X obj 651 183 hsl 128 30 0 40131 0 0 \$0-stop-s \$0-stop stop 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 651 150 hsl 128 30 0 40131 0 0 \$0-start-s \$0-start start 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 651 183 hsl 128 30 0 40131 0 0 \$0-stop-s \$0-stop stop 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 30 519 table \$0-sample 4.41e+06;
 #X obj 326 272 t b f;
-#X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 651 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 119 281 r \$0-stop-s;
@@ -183,12 +180,12 @@
 #X restore 88 251 pd set_length;
 #X obj 286 4 inlet;
 #X obj 88 31 route rec open;
-#X obj 124 202 soundfiler;
-#X msg 124 177 read \$1 \$2;
-#X obj 34 68 symbol;
-#X obj 34 90 t s b;
-#X obj 61 115 symbol \$0-sample;
-#X obj 34 140 pack s s;
+#X obj 16 217 soundfiler;
+#X msg 16 192 read \$1 \$2;
+#X obj 16 90 symbol;
+#X obj 16 112 t s b;
+#X obj 43 137 symbol \$0-sample;
+#X obj 16 162 pack s s;
 #N canvas 36 76 645 680 voice 0;
 #X obj 50 628 outlet~;
 #X obj 138 4 inlet;
@@ -385,6 +382,7 @@
 #X connect 20 0 18 0;
 #X connect 21 0 2 0;
 #X restore 566 488 pd voice;
+#X obj 16 65 _make_path;
 #X connect 0 0 12 1;
 #X connect 2 0 16 0;
 #X connect 6 0 13 2;
@@ -405,7 +403,7 @@
 #X connect 13 0 29 0;
 #X connect 15 0 23 1;
 #X connect 16 0 12 0;
-#X connect 16 1 19 0;
+#X connect 16 1 30 0;
 #X connect 17 0 14 0;
 #X connect 18 0 17 0;
 #X connect 19 0 20 0;
@@ -420,4 +418,5 @@
 #X connect 27 0 1 0;
 #X connect 28 0 1 0;
 #X connect 29 0 1 0;
+#X connect 30 0 19 0;
 #X coords 0 -1 1 1 191 125 1 640 125;

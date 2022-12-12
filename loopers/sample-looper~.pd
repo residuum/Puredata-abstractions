@@ -6,10 +6,8 @@
 #X obj 239 93 sel start stop;
 #X obj 239 71 list \$1;
 #X obj 350 364 phasor~ 0;
-#X obj 646 150 hsl 128 30 0 427329 0 0 \$0-start-s \$0-start start
-136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
-#X obj 646 183 hsl 128 30 0 427329 0 0 \$0-stop-s \$0-stop stop 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 646 150 hsl 128 30 0 427329 0 0 \$0-start-s \$0-start start 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 646 183 hsl 128 30 0 427329 0 0 \$0-stop-s \$0-stop stop 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 351 403 *~ 1;
 #X obj 30 519 table \$0-sample 4.41e+06;
 #X obj 259 438 +~ 0;
@@ -20,12 +18,9 @@
 #X obj 632 4 inlet;
 #X obj 490 395 fexpr~ $x[0] < $x[-1];
 #X obj 490 416 threshold~ 0.5 1 0.1 1;
-#X obj 779 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10
-#fcfcfc #000000 #000000;
-#X obj 646 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
-#X obj 646 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136
-15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 779 129 bng 30 250 50 0 \$0-reset-s \$0-reset empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 646 216 hsl 128 30 0.1 10 1 0 \$0-speed-s \$0-speed speed 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
+#X obj 646 249 hsl 128 30 0.1 10 1 0 \$0-pitch-s \$0-pitch pitch 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 206 163 r \$0-start-s;
 #X obj 206 188 t b f f;
 #X obj 119 281 r \$0-stop-s;
@@ -117,14 +112,13 @@
 #X obj 239 120 t b b b b;
 #X msg 278 523 1;
 #X msg 320 523 0;
-#X obj 646 281 hsl 128 15 0 1 0 0 empty \$0-pos position 136 7 0 10
-#dcdcdc #000000 #000000 0 1;
+#X obj 646 281 hsl 128 15 0 1 0 0 empty \$0-pos position 136 7 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 168 472 s \$0-pos;
 #X obj 168 442 snapshot~;
 #X obj 168 406 metro 10;
 #X obj 168 375 loadbang;
 #X obj 341 132 t b b b b;
-#X obj 124 202 soundfiler;
+#X obj 14 219 soundfiler;
 #N canvas 362 322 450 300 set_length 0;
 #X obj 91 24 inlet;
 #X obj 186 142 s \$0-stop;
@@ -153,11 +147,11 @@
 #X connect 10 6 11 0;
 #X restore 88 251 pd set_length;
 #X obj 88 31 route rec open play;
-#X msg 124 177 read \$1 \$2;
-#X obj 34 68 symbol;
-#X obj 34 90 t s b;
-#X obj 61 115 symbol \$0-sample;
-#X obj 34 140 pack s s;
+#X msg 14 194 read \$1 \$2;
+#X obj 14 98 symbol;
+#X obj 14 120 t s b;
+#X obj 41 145 symbol \$0-sample;
+#X obj 14 170 pack s s;
 #X obj 451 533 loadbang;
 #X obj 451 555 \$0;
 #X obj 451 577 outlet;
@@ -166,6 +160,7 @@
 #X obj 385 40 s \$0-speed;
 #X obj 471 41 s \$0-pitch;
 #X obj 258 495 _table_reader_pitch \$0-sample;
+#X obj 14 74 _make_path;
 #X connect 0 0 6 0;
 #X connect 1 0 26 1;
 #X connect 3 0 45 0;
@@ -214,7 +209,7 @@
 #X connect 43 0 44 0;
 #X connect 44 0 53 0;
 #X connect 45 0 26 0;
-#X connect 45 1 47 0;
+#X connect 45 1 59 0;
 #X connect 45 2 5 0;
 #X connect 46 0 43 0;
 #X connect 47 0 48 0;
@@ -227,4 +222,5 @@
 #X connect 54 0 56 0;
 #X connect 55 0 57 0;
 #X connect 58 0 33 0;
+#X connect 59 0 47 0;
 #X coords 0 -1 1 1 191 175 1 640 125;

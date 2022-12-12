@@ -8,7 +8,6 @@ For all abstractions to load without any error you need the following
 libraries, available via deken:
 - iemguts
 - cyclone
-- list-abs
 - zexy
 
 ## Effects and Mixing (fx)
@@ -22,6 +21,10 @@ libraries, available via deken:
 
 `[pitchshift~]`, `[pitchshift2~]`: simple pitchshifter, each with its own
 residual effects.
+
+`[vol-env~]`: 16 step volume envelope with bypass.
+
+`[waveshaper~]`: render incoming sound to base sounds.
 
 ## Glue objects (glue)
 `[bangonce]`: outputs only one bang, if the inlet receives a series of
