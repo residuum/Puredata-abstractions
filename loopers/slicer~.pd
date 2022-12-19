@@ -32,9 +32,9 @@
 #X obj 632 173 table \$0-sample-r;
 #X obj 632 198 table \$0-sample-l;
 #X msg 181 235 read -resize \$2 \$1-sample-l \$1-sample-r;
-#X obj 9 579 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 3850 1;
+#X obj 9 579 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 2266 1;
 #X obj 193 62 inlet;
-#X obj 9 560 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 3950 1;
+#X obj 9 560 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 9098 1;
 #X msg 56 118 1;
 #X obj 61 206 *;
 #X msg 498 214 1;
@@ -51,7 +51,7 @@
 #X obj 623 690 t b b;
 #X obj 576 668 spigot 1;
 #X obj 629 642 expr if($f1 == 0 \, 1 \, 0);
-#X obj 648 79 t b b;
+#X obj 615 106 t b b;
 #X obj 44 472 + 1;
 #X obj 151 364 * 0;
 #X obj 12 666 t b f;
@@ -61,8 +61,9 @@
 #X obj 233 302 del 1;
 #X obj 600 37 t b b b;
 #X obj 540 367 spigot 1;
-#X msg 603 276 0;
-#X msg 542 316 1;
+#X msg 658 237 0;
+#X msg 554 268 1;
+#X obj 554 239 del 1 64 samp;
 #X connect 0 0 23 0;
 #X connect 1 0 24 0;
 #X connect 2 0 3 0;
@@ -140,10 +141,11 @@
 #X connect 57 0 56 0;
 #X connect 58 0 56 0;
 #X connect 59 0 57 0;
-#X connect 60 0 63 0;
+#X connect 60 0 64 0;
 #X connect 60 1 52 0;
 #X connect 60 2 62 0;
 #X connect 61 0 46 0;
 #X connect 62 0 61 1;
-#X connect 63 0 61 0;
+#X connect 63 0 61 1;
+#X connect 64 0 63 0;
 #X coords 0 -1 1 1 240 100 1 0 500;
