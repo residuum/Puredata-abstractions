@@ -32,9 +32,9 @@
 #X obj 632 173 table \$0-sample-r;
 #X obj 632 198 table \$0-sample-l;
 #X msg 181 235 read -resize \$2 \$1-sample-l \$1-sample-r;
-#X obj 9 579 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 2266 1;
+#X obj 9 579 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 6350 1;
 #X obj 193 62 inlet;
-#X obj 9 560 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 9098 1;
+#X obj 9 560 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 6350 1;
 #X msg 56 118 1;
 #X obj 61 206 *;
 #X msg 498 214 1;
@@ -63,7 +63,7 @@
 #X obj 540 367 spigot 1;
 #X msg 658 237 0;
 #X msg 554 268 1;
-#X obj 554 239 del 1 64 samp;
+#X obj 554 239 del 10;
 #X connect 0 0 23 0;
 #X connect 1 0 24 0;
 #X connect 2 0 3 0;
