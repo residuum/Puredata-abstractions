@@ -27,6 +27,7 @@
 #X obj 407 62 \$1;
 #X obj 407 87 sel 0;
 #X obj 12 55 rand 4500;
+#X obj 317 20 inlet;
 #X connect 0 0 15 0;
 #X connect 0 0 12 0;
 #X connect 1 0 23 0;
@@ -61,4 +62,5 @@
 #X connect 26 1 20 0;
 #X connect 26 1 16 1;
 #X connect 27 0 1 0;
+#X connect 28 0 26 0;
 #X coords 0 -1 1 1 85 60 1 150 135;
