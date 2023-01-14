@@ -28,6 +28,8 @@
 #X obj 407 87 sel 0;
 #X obj 12 55 rand 4500;
 #X obj 317 20 inlet;
+#X obj 206 209 t f b;
+#X msg 253 69 0;
 #X connect 0 0 15 0;
 #X connect 0 0 12 0;
 #X connect 1 0 23 0;
@@ -45,7 +47,7 @@
 #X connect 9 1 18 0;
 #X connect 10 1 11 0;
 #X connect 11 0 19 0;
-#X connect 14 0 15 1;
+#X connect 14 0 29 0;
 #X connect 15 0 27 0;
 #X connect 16 0 12 0;
 #X connect 17 0 12 0;
@@ -63,4 +65,7 @@
 #X connect 26 1 16 1;
 #X connect 27 0 1 0;
 #X connect 28 0 26 0;
-#X coords 0 -1 1 1 85 60 1 150 135;
+#X connect 29 0 15 1;
+#X connect 29 1 30 0;
+#X connect 30 0 13 0;
+#X coords 0 -1 1 1 85 45 1 155 152;
