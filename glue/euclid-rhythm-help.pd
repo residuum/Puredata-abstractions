@@ -1,0 +1,15 @@
+#N canvas 714 419 534 300 12;
+#X obj 30 47 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 30 77 metro 500;
+#X msg 69 47 stop;
+#X obj 30 167 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 30 142 euclid-rhythm 16 5;
+#X text 29 12 Euclidian ryhthms;
+#X text 194 91 inlets: 1: bang to trigger the next step 2: number of steps 3: number of bangs to output per cycle 4: rotation;
+#X text 194 10 creation arguments: 1: number of steps 2: number of bangs to output per cycle 3: rotation;
+#X obj 53 105 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
