@@ -1,5 +1,5 @@
 #N canvas 968 192 450 450 12;
-#X obj 43 40 inlet;
+#X obj 19 50 inlet;
 #X obj 43 355 outlet;
 #X obj 43 205 f;
 #X obj 94 206 + 1;
@@ -17,10 +17,12 @@
 #X obj 43 239 moses 16;
 #X obj 43 296 sel 1;
 #X obj 136 38 t b b b b b;
-#X obj 61 157 \$3;
+#X obj 77 157 \$3;
 #X obj 43 321 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 287 154 4;
-#X connect 0 0 2 0;
+#X obj 19 92 route reset;
+#X obj 19 117 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X connect 0 0 21 0;
 #X connect 2 0 3 0;
 #X connect 2 0 15 0;
 #X connect 3 0 2 1;
@@ -48,3 +50,6 @@
 #X connect 18 0 2 1;
 #X connect 19 0 1 0;
 #X connect 20 0 11 1;
+#X connect 21 0 22 0;
+#X connect 21 1 2 0;
+#X connect 22 0 18 0;
