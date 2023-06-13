@@ -10,8 +10,12 @@
 #X obj 263 46 phasor~ 1;
 #X text 241 147 possible mix:;
 #X text 251 161 - saw: phasor~ with lop~ at 3x frequency of base note;
-#X text 250 174 - GT: base note;
 #X text 250 187 - 1-5: partials;
+#X text 250 174 - 0: base note;
+#X msg 377 41 0 120;
+#X msg 427 43 saw 56;
+#X msg 506 37 raw \$1;
+#X obj 504 7 tgl 18 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 5 0;
@@ -20,3 +24,7 @@
 #X connect 6 0 7 0;
 #X connect 7 0 5 1;
 #X connect 8 0 7 1;
+#X connect 13 0 3 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;
+#X connect 16 0 15 0;
