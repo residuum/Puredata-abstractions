@@ -1,32 +1,21 @@
 #N canvas 876 192 801 653 10;
-#X obj 34 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 253 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 34 229 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 69 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 105 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 141 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 177 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 213 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 245 17 right input is routed to output according to radio buttons
-;
+#X obj 34 34 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 329 38 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 34 229 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 69 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 105 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 141 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 177 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 213 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X text 321 17 right input is routed to output according to radio buttons;
 #X text 13 12 left inlet switches the radio buttons;
 #X obj 34 102 shift-router;
-#X obj 252 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 276 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 301 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 325 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 252 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 276 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 301 231 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 325 232 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 378 159 shift-router 4;
+#X text 378 126 the first parameter will restrict the number of items.;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;
 #X connect 10 0 2 0;
