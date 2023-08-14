@@ -1,56 +1,45 @@
-#N canvas 448 106 649 540 10;
-#X obj -6 -6 inlet;
-#X obj -13 525 outlet;
-#X obj -7 123 hradio 30 1 0 10 empty empty empty 0 -8 0 5 -262144 -1
--1 0;
-#X obj 319 4 inlet;
-#X obj -13 482 spigot;
-#X obj 20 455 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 43 524 outlet;
-#X obj 43 481 spigot;
-#X obj 76 454 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 94 525 outlet;
-#X obj 94 482 spigot;
-#X obj 127 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 142 525 outlet;
-#X obj 142 482 spigot;
-#X obj 175 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 194 526 outlet;
-#X obj 194 483 spigot;
-#X obj 227 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 245 525 outlet;
-#X obj 245 482 spigot;
-#X obj 278 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 40 31 + 1;
-#X msg 61 63 0;
-#X obj -6 29 1;
-#X obj 311 526 outlet;
-#X obj 311 483 spigot;
-#X obj 344 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 383 525 outlet;
-#X obj 383 482 spigot;
-#X obj 416 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 443 525 outlet;
-#X obj 443 482 spigot;
-#X obj 476 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 503 525 outlet;
-#X obj 503 482 spigot;
-#X obj 536 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj -3 238 expr if($f1==0 \, 1 \, 0) \; if($f1==1 \, 1 \, 0) \;
-if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
-\; if($f1==5 \, 1 \, 0) \; if($f1==6 \, 1 \, 0) \; if($f1==7 \, 1 \,
-0) \; if($f1==8 \, 1 \, 0) \; if($f1==9 \, 1 \, 0) \;, f 97;
-#X obj -5 62 moses 10;
+#N canvas 448 106 795 665 10;
+#X obj 14 34 inlet;
+#X obj 7 565 outlet;
+#X obj 13 163 hradio 30 1 0 10 empty empty empty 0 -8 0 5 #fcfcfc #000000 #000000 0;
+#X obj 339 44 inlet;
+#X obj 7 522 spigot;
+#X obj 40 495 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 1 1;
+#X obj 63 564 outlet;
+#X obj 63 521 spigot;
+#X obj 96 494 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 114 565 outlet;
+#X obj 114 522 spigot;
+#X obj 147 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 162 565 outlet;
+#X obj 162 522 spigot;
+#X obj 195 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 214 566 outlet;
+#X obj 214 523 spigot;
+#X obj 247 496 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 265 565 outlet;
+#X obj 265 522 spigot;
+#X obj 298 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 46 67 + 1;
+#X msg 80 96 0;
+#X obj 14 69 1;
+#X obj 331 566 outlet;
+#X obj 331 523 spigot;
+#X obj 364 496 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 403 565 outlet;
+#X obj 403 522 spigot;
+#X obj 436 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 463 565 outlet;
+#X obj 463 522 spigot;
+#X obj 496 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 523 565 outlet;
+#X obj 523 522 spigot;
+#X obj 556 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 17 278 expr if($f1==0 \, 1 \, 0) \; if($f1==1 \, 1 \, 0) \; if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0) \; if($f1==5 \, 1 \, 0) \; if($f1==6 \, 1 \, 0) \; if($f1==7 \, 1 \, 0) \; if($f1==8 \, 1 \, 0) \; if($f1==9 \, 1 \, 0) \;, f 97;
+#X obj 14 92 moses 10;
+#X obj 121 39 \$1;
+#X obj 121 62 sel 0;
+#X obj 121 17 loadbang;
 #X connect 0 0 23 0;
 #X connect 2 0 36 0;
 #X connect 2 0 21 0;
@@ -99,4 +88,7 @@ if($f1==2 \, 1 \, 0) \; if($f1==3 \, 1 \, 0) \; if($f1==4 \, 1 \, 0)
 #X connect 36 9 35 0;
 #X connect 37 0 2 0;
 #X connect 37 1 22 0;
-#X coords 0 -1 1 1 302 35 2 -8 120;
+#X connect 38 0 39 0;
+#X connect 39 1 37 1;
+#X connect 40 0 38 0;
+#X coords 0 -1 1 1 302 48 1 12 145;
