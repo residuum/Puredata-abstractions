@@ -103,8 +103,8 @@
 #X obj 183 343 line;
 #X msg 185 314 0 200;
 #X msg 229 314 1;
-#X obj 711 -3 table \$0-loop-r;
-#X obj 711 -23 table \$0-loop-l;
+#X obj 711 -3 array define \$0-loop-r;
+#X obj 711 -23 array define \$0-loop-l;
 #X obj 195 459 *~ 0;
 #X obj 301 -22 inlet;
 #X obj 381 -19 inlet;

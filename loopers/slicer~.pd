@@ -29,8 +29,8 @@
 #X obj 157 827 *~;
 #X obj 344 845 *~;
 #X obj 209 699 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 632 303 table \$0-sample-r;
-#X obj 632 328 table \$0-sample-l;
+#X obj 632 303 array define \$0-sample-r;
+#X obj 632 328 array define \$0-sample-l;
 #X msg 181 365 read -resize \$2 \$1-sample-l \$1-sample-r;
 #X obj 9 709 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 6350 1;
 #X obj 524 169 inlet;

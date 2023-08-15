@@ -63,7 +63,7 @@
 #X obj 324 90 symbol \$0-hanning;
 #X obj 98 258 *~ 1024;
 #X obj 264 262 *~ 1024;
-#X obj 442 318 table \$0-hanning 1024;
+#X obj 442 318 array define \$0-hanning 1024;
 #X obj 88 143 / 1024;
 #X connect 0 0 29 0;
 #X connect 1 0 5 0;

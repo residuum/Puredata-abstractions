@@ -6,7 +6,7 @@
 #X obj 646 150 hsl 128 30 0 69632 0 0 \$0-start-s \$0-start start 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 646 183 hsl 128 30 0 69632 0 0 \$0-stop-s \$0-stop stop 136 15 0 10 #fcfcfc #fc0400 #000000 0 1;
 #X obj 385 473 *~ 1;
-#X obj 640 74 table \$0-sample 4.41e+06;
+#X obj 640 74 array define \$0-sample 4.41e+06;
 #X obj 293 508 +~ 0;
 #X text 332 509 offset;
 #X obj 324 351 t b f;
