@@ -1,11 +1,11 @@
 #N canvas 196 149 664 616 10;
 #X obj 169 32 inlet;
 #X obj 327 40 inlet;
-#X text 62 14 freq;
+#X text 62 74 freq;
 #X text 151 9 pulsewidth;
 #X text 331 18 reset;
-#X obj 67 315 hip~ 5;
-#X obj 67 343 outlet~;
+#X obj 67 375 hip~ 5;
+#X obj 67 403 outlet~;
 #X obj 65 225 phasor~ \$1;
 #X obj 288 95 loadbang;
 #X obj 270 256 expr 1 - $f1;
@@ -16,7 +16,9 @@
 #X msg 288 183 0.5;
 #X obj 169 123 moses 0;
 #X obj 214 153 moses 1;
-#X obj 65 33 inlet~;
+#X obj 65 93 inlet~;
+#X obj 65 8 loadbang;
+#X obj 65 31 \$1;
 #X connect 0 0 15 0;
 #X connect 1 0 7 1;
 #X connect 5 0 6 0;
@@ -35,4 +37,5 @@
 #X connect 16 0 10 1;
 #X connect 16 0 9 0;
 #X connect 17 0 7 0;
-#X connect 17 1 7 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
