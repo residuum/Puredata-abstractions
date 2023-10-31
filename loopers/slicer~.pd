@@ -1,4 +1,4 @@
-#N canvas 322 0 826 995 12;
+#N canvas 186 0 962 995 12;
 #X obj 181 393 soundfiler;
 #X obj 181 262 \$0;
 #X obj 91 261 samplerate~;
@@ -14,7 +14,7 @@
 #X obj 345 933 outlet~;
 #X obj 158 907 *~;
 #X obj 346 908 *~;
-#X obj 6 652 tgl 32 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 6 652 tgl 32 0 empty empty empty 17 7 0 10 #ffffff #000000 #000000 0 1;
 #X obj 56 193 loadbang;
 #X obj 652 929 outlet;
 #X obj 606 694 fexpr~ $x[0] < $x[-1];
@@ -32,16 +32,16 @@
 #X obj 632 303 array define \$0-sample-r;
 #X obj 632 328 array define \$0-sample-l;
 #X msg 181 365 read -resize \$2 \$1-sample-l \$1-sample-r;
-#X obj 9 709 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 6350 1;
+#X obj 9 709 hsl 128 15 0.25 4 1 1 empty empty pitch 134 7 0 10 #fcfcfc #000000 #000000 2793 1;
 #X obj 524 169 inlet;
-#X obj 9 690 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 6350 1;
+#X obj 9 690 hsl 128 15 0.25 4 1 1 empty empty speed 134 7 0 10 #fcfcfc #000000 #000000 8052 1;
 #X msg 56 248 1;
 #X obj 61 336 *;
 #X msg 498 344 1;
 #X obj 465 168 inlet;
 #X obj 345 732 _table_reader_pitch \$0-sample-r;
 #X obj 221 292 _make_path;
-#X obj 82 664 tgl 20 0 empty empty play\ on\ bang\ only 24 9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 82 664 tgl 20 0 empty empty play\ on\ bang\ only 24 9 0 12 #ffffff #000000 #000000 0 1;
 #X obj 345 883 *~ 1;
 #X obj 158 880 *~ 1;
 #X obj 545 542 spigot;
@@ -70,6 +70,12 @@
 #X obj 288 87 t b s;
 #X obj 4 781 spigot 0;
 #X obj 4 753 t b b f;
+#X obj -213 640 sel 0 1;
+#X msg -213 665 color #ffffff;
+#X obj -133 743 sel 0 1;
+#X msg -133 768 color #ffffff;
+#X msg -201 700 color #00ff00;
+#X msg -121 803 color #ffff00;
 #X connect 0 0 23 0;
 #X connect 1 0 24 0;
 #X connect 2 0 3 0;
@@ -88,6 +94,7 @@
 #X connect 15 0 13 1;
 #X connect 15 0 14 1;
 #X connect 15 0 70 0;
+#X connect 15 0 71 0;
 #X connect 16 0 21 0;
 #X connect 18 0 19 0;
 #X connect 19 0 47 0;
@@ -125,6 +132,7 @@
 #X connect 42 0 45 1;
 #X connect 42 0 50 0;
 #X connect 42 0 69 1;
+#X connect 42 0 73 0;
 #X connect 43 0 14 0;
 #X connect 44 0 13 0;
 #X connect 45 0 56 0;
@@ -165,4 +173,12 @@
 #X connect 70 0 69 0;
 #X connect 70 1 53 0;
 #X connect 70 2 53 1;
+#X connect 71 0 72 0;
+#X connect 71 1 75 0;
+#X connect 72 0 15 0;
+#X connect 73 0 74 0;
+#X connect 73 1 76 0;
+#X connect 74 0 42 0;
+#X connect 75 0 15 0;
+#X connect 76 0 42 0;
 #X coords 0 -1 1 1 240 100 1 0 630;

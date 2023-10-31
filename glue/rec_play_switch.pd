@@ -6,7 +6,7 @@
 #X obj 63 -62 inlet;
 #X obj 42 231 outlet;
 #X obj 24 52 switch-bang;
-#X obj 63 53 switch-bang;
+#X obj 63 53 switch-bang #00ff00;
 #X msg 52 18 1;
 #X msg 113 25 0;
 #X obj 24 -23 route bang 1 0;
