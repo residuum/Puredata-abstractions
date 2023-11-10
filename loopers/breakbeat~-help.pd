@@ -3,19 +3,18 @@
 #X msg 152 147 stop;
 #X obj 124 196 breakbeat~ test.wav;
 #X obj 133 384 dac~ 1 2;
-#X floatatom 220 83 5 0 0 0 - - -, f 5;
-#X floatatom 259 121 5 0 0 0 - - -, f 5;
+#X floatatom 220 83 5 0 0 0 - - - 0;
+#X floatatom 259 121 5 0 0 0 - - - 0;
 #X text 221 66 speed;
 #X text 262 101 pitch;
-#X obj 361 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 338 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 361 414 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 338 130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X text 344 113 restart;
 #X obj 415 198 breakbeat~ test.wav 1.1 0.5;
 #X text 408 174 startup parameters: file speed pitch;
-#X floatatom 268 409 5 0 0 0 - - -, f 5;
+#X floatatom 268 409 5 0 0 0 - - - 0;
 #X text 91 29 Automatic breakbeat generator;
+#X obj 96 68 tgl 18 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -25,3 +24,4 @@
 #X connect 4 0 2 1;
 #X connect 5 0 2 2;
 #X connect 9 0 2 3;
+#X connect 15 0 2 0;
