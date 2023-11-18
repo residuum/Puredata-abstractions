@@ -1,3 +1,5 @@
+**Due to Github's determination to be the "world’s leading AI-powered developer platform" I will move my projects to [Codeberg](https://codeberg.org/Residuum)**
+
 # Abstractions for Puredata
 
 This is a collection of abstractions that I have made for Puredata. I use
